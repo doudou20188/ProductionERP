@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="production_ms:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88c6d4f2-9796-480e-acaa-2dd8830683bd" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="948265498">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="production_ms" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>1.2.</find>
+      <find>log4j</find>
+      <find>计算机科学与技术学院</find>
+      <find>生产管理系统</find>
+      <find>管理系统</find>
+      <find>terracotta.org</find>
+      <find>title hide</find>
+      <find>null</find>
+      <find>Hibernate</find>
+      <find>NotEmpty</find>
+      <find>validator</find>
+      <find>shiro</find>
+      <find>SysPermission</find>
+      <find>CustomRealm</find>
+      <find>findRoleByUserId</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PATH_TO_GIT" value="C:\Program Files\Git\cmd\git.exe" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="production_ms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="production_ms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="85" />
+    <option name="width" value="1375" />
+    <option name="height" value="780" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="production_ms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="production_ssm-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="production_ms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="production_ssm-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="production_ms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="production_ssm-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="production_ms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="production_ssm-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544014442813" />
+    <property name="last_opened_file_path" value="D:/Dev/DevPath/production_ssm-master" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15625" />
+    <property name="project.structure.side.proportion" value="0.30352047" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\workspace\idea08\production_ssm-master\src\main\webapp\WEB-INF\image\login" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.tomcat">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="production_ms [compile]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="production_ms [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.44" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="production_ms:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_production_ms" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61103" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="production_ms:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.tomcat" />
+      <item itemvalue="Maven.production_ms [compile]" />
+      <item itemvalue="Maven.production_ms [package]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.production_ms [package]" />
+        <item itemvalue="Maven.production_ms [compile]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88c6d4f2-9796-480e-acaa-2dd8830683bd" name="Default" comment="" />
+      <created>1523869156862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523869156862</updated>
+      <workItem from="1523869168837" duration="741000" />
+      <workItem from="1523878158466" duration="1194000" />
+      <workItem from="1523928884304" duration="50000" />
+      <workItem from="1523929459747" duration="794000" />
+      <workItem from="1525093308192" duration="110000" />
+      <workItem from="1528546416903" duration="743000" />
+      <workItem from="1528859334743" duration="3068000" />
+      <workItem from="1528946290861" duration="4970000" />
+      <workItem from="1529154541301" duration="2814000" />
+      <workItem from="1543980977453" duration="1742000" />
+      <workItem from="1544013979521" duration="489000" />
+      <workItem from="1544014613707" duration="34000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="16749000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4992928" visible="true" weight="0.22989276" />
+      <window_info id="Structure" order="2" weight="0.25" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5007072" side_tool="true" weight="0.2272118" />
+      <window_info id="Palette&#9;" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.24555735" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32900432" />
+      <window_info anchor="bottom" id="Messages" order="6" weight="0.41033927" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32900432" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32843137" />
+      <window_info anchor="bottom" id="Problems" order="10" weight="0.29545453" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.32531825" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Application Servers" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.2191689" />
+      <window_info anchor="right" id="Designer" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/image/login/login_bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-service.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-dao.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/COrderExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/DepartmentExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/vo/DeviceMaintainVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/vo/DeviceVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/WorkExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/authority/SysRole.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/authority/SysUserExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/authority/SysUserRoleExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/filter/SessionFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/util/FileUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/util/IDUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/util/JsonUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/util/ResourcesUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/util/SpringUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/sqlMapConfig.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/util/UtilFuns.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/EmployeeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/FirstController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/ManufactureController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/MaterialConsumeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/MaterialController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/TechnologyController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CustomValidationMessages.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/COrder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/DeviceCheck.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/DeviceExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/DeviceFault.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/Process.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/TechnologyPlan.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/mapper/UnqualifyApplyMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/shiro-ehcache.xml" />
+    <entry file="file://$PROJECT_DIR$/production_ssm.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-trans.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/authority/SysPermission.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/domain/customize/ActiveUser.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/service/RoleService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/DeviceCheckController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/shiro/CustomRealm.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-shiro.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/DeviceController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/controller/DeviceMaintainController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/service/FileService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/service/EmployeeService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/service/impl/FileServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/service/impl/CustomServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hqu/production_ms/service/impl/RoleServiceImpl.java" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>production_ms:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>production_ms</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30352047" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
