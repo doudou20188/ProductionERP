@@ -20,8 +20,6 @@ public class mainController {
     @RequestMapping("/{name}")
     public String main(@PathVariable String name){
         System.out.println(name);
-        Device device = deviceMapper.selectByPrimaryKey("001");
-        System.out.println(device);
         return name;
     }
 }

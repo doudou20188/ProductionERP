@@ -7,17 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="090f7109-bebd-4808-81d6-88a29ec37e16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/impl/DeviceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/DeviceExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/DeviceExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/resources/com/cskaoyan/mapper/DeviceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/com/cskaoyan/mapper/DeviceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/resources/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/DeviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/target/classes/applicationContext.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/ProductionERP/target/" />
@@ -102,17 +99,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="161" />
+          <entry key="JAVA" value="314" />
           <entry key="JSP" value="1" />
-          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="PLAIN_TEXT" value="35" />
           <entry key="XML" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="12" />
-          <entry key="JSP" value="6" />
+          <entry key="JAVA" value="17" />
+          <entry key="JSP" value="8" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="13" />
         </counts>
@@ -121,20 +118,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductionERP/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
-              <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,41 +130,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.4.RELEASE/spring-test-5.0.4.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
-              <folding>
-                <element signature="e#3866#3867#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3451">
-              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state relative-caret-position="243">
+              <caret line="308" column="9" lean-forward="true" selection-start-line="308" selection-start-column="9" selection-end-line="308" selection-end-column="9" />
+              <folding>
+                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+                <element signature="n#sql#0;n#mapper#0;n#!!top" />
+                <element signature="n#sql#1;n#mapper#0;n#!!top" />
+                <element signature="n#sql#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" />
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="n#delete#1;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#if#0;n#select#2;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#1;n#mapper#0;n#!!top" />
+                <element signature="n#update#2;n#mapper#0;n#!!top" />
+                <element signature="e#5#853#0" />
+                <element signature="n#if#0;n#set#0;n#update#2;n#mapper#0;n#!!top" />
+                <element signature="n#update#3;n#mapper#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -214,19 +195,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/deviceList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="-1767" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/DeviceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/impl/DeviceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="209">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,8 +262,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -246,6 +272,7 @@
       <find>Session</find>
       <find>servlet</find>
       <find>Example_Where_Clause</find>
+      <find>data-options=&quot;singleSelect:false,collapsible:true,pagination:true,rownumbers:true,</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -271,6 +298,10 @@
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java" />
         <option value="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java" />
+        <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/DeviceService.java" />
+        <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/impl/DeviceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" />
+        <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java" />
       </list>
     </option>
   </component>
@@ -393,6 +424,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProductionERP_Start" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductionERP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -431,6 +472,17 @@
               <item name="ProductionERP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProductionERP_Start" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductionERP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -449,6 +501,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProductionERP_Start" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductionERP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProductionERP_Start" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductionERP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
@@ -483,7 +554,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544099905816" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544101755605" />
     <property name="last_opened_file_path" value="E:/王道/第三阶段SSM/HRM/参考实现/hrm_ssm_maven" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -647,7 +718,7 @@
       <workItem from="1544070844400" duration="11622000" />
       <workItem from="1544091836397" duration="436000" />
       <workItem from="1544092349821" duration="271000" />
-      <workItem from="1544092800256" duration="3852000" />
+      <workItem from="1544092800256" duration="5814000" />
     </task>
     <task id="LOCAL-00001" summary="start2">
       <created>1544068500705</created>
@@ -670,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544099691000</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="统一结构">
+      <created>1544100026825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544100026825</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -706,7 +784,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21930000" />
+    <option name="totallyTimeSpent" value="23892000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,7 +797,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24396783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -732,7 +809,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4953083" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" weight="0.41926345" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" visible="true" weight="0.41926345" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -801,7 +878,8 @@
     <MESSAGE value="start2" />
     <MESSAGE value="可运行" />
     <MESSAGE value="Test完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test完成" />
+    <MESSAGE value="统一结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="统一结构" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,23 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -991,13 +1052,6 @@
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/resources/com.cskaoyan.mapper/DeviceMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3451">
-          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/resources/com/cskaoyan/mapper/DeviceMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1023,20 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1049,8 +1089,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/deviceType.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/deviceList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1767" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/impl/DeviceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="308" column="9" lean-forward="true" selection-start-line="308" selection-start-column="9" selection-end-line="308" selection-end-column="9" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#1;n#mapper#0;n#!!top" />
+            <element signature="n#sql#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#1;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#2;n#mapper#0;n#!!top" />
+            <element signature="e#5#853#0" />
+            <element signature="n#if#0;n#set#0;n#update#2;n#mapper#0;n#!!top" />
+            <element signature="n#update#3;n#mapper#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

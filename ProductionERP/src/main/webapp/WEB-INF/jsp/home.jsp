@@ -309,7 +309,7 @@
 				}
 			});
 	
-			/* Device Manager Tree onClick Event */
+			/* DeviceService Manager Tree onClick Event */
 			$('#deviceMonitor').tree({
 				onClick : function(node) {
 					/* debugger; */
@@ -390,7 +390,7 @@
 				}
 			});
 			
-			/* Device Manager Tree onClick Event */
+			/* DeviceService Manager Tree onClick Event */
 			$('#employeeMonitor').tree({
 				onClick : function(node) {
 					/* debugger; */
