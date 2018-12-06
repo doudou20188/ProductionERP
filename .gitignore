@@ -1,8 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/ProductionERP.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea/
 target/
 test/resources/
 /src/test/
