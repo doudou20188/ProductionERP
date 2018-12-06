@@ -40,7 +40,7 @@
     <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="user" value="root"></property>
         <property name="password" value="asdzxcvb"></property>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/multi_table_db?serverTimezone=GMT"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/erp?serverTimezone=GMT"/>
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
     </bean>
 
@@ -53,14 +53,16 @@
     <!--扫描mybatis的xml映射文件-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-        <property name="basePackage" value="com.cskaoyan.dao"></property>
+        <property name="basePackage" value="com.cskaoyan.mapper"></property>
     </bean>
-
+    <!--<bean class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+        <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>-->
+        <!--<property name="mapperInterface" value="com.cskaoyan.mapper.DeviceMapper"></property>-->
+    <!--</bean>-->
     <tx:annotation-driven transaction-manager="txManager" ></tx:annotation-driven>
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="datasource"></property>
     </bean>
-
 
 </beans>
