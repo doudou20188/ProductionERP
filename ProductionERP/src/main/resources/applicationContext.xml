@@ -55,10 +55,10 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
         <property name="basePackage" value="com.cskaoyan.mapper"></property>
     </bean>
-    <!--<bean class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+    <!--<dao class="org.mybatis.spring.mapper.MapperFactoryBean">-->
         <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>-->
         <!--<property name="mapperInterface" value="com.cskaoyan.mapper.DeviceMapper"></property>-->
-    <!--</bean>-->
+    <!--</dao>-->
     <tx:annotation-driven transaction-manager="txManager" ></tx:annotation-driven>
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

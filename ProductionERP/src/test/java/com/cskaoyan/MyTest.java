@@ -1,6 +1,6 @@
 package com.cskaoyan;
 
-import com.cskaoyan.bean.Device;
+import com.cskaoyan.dao.Device;
 import com.cskaoyan.mapper.DeviceMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

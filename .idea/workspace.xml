@@ -7,33 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="090f7109-bebd-4808-81d6-88a29ec37e16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/DeviceExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/com/cskaoyan/mapper/DeviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/Controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/DeviceExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/DeviceExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/resources/com/cskaoyan/mapper/DeviceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/com/cskaoyan/mapper/DeviceMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/resources/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/resources/mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-aop-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-beans-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-context-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-core-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-expression-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-jcl-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-web-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/lib/spring-webmvc-5.0.4.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/ProductionERP4/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/ProductionERP/target/" />
@@ -120,14 +104,14 @@
         <counts>
           <entry key="JAVA" value="161" />
           <entry key="JSP" value="1" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="XML" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
           <entry key="JSP" value="6" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="13" />
@@ -152,22 +136,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/resources/applicationContext.xml">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="55" column="60" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="63" />
+            <state relative-caret-position="368">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="57">
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -238,11 +222,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="57">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -279,13 +263,14 @@
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/Controller/mainController.java" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/resources/mybatis.xml" />
         <option value="$PROJECT_DIR$/ProductionERP/src/test/java/MyTest.java" />
-        <option value="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" />
         <option value="$PROJECT_DIR$/ProductionERP/pom.xml" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/resources/DeviceMapper.xml" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/Controller/DeviceController.java" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/Service/Device.java" />
         <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java" />
+        <option value="$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java" />
+        <option value="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java" />
       </list>
     </option>
   </component>
@@ -408,7 +393,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
@@ -418,7 +403,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProductionERP_Start" type="b2602c69:ProjectViewProjectNode" />
@@ -498,7 +483,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544099609509" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544099905816" />
     <property name="last_opened_file_path" value="E:/王道/第三阶段SSM/HRM/参考实现/hrm_ssm_maven" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -511,6 +496,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.cskaoyan" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cskaoyan.interceptor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Dev\DevPath\ProductionERP_Start\ProductionERP\src\main\resources\com\cskaoyan\mapper" />
@@ -532,7 +520,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.Test1">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
     <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProductionERP4" />
       <option name="PACKAGE_NAME" value="com.cskaoyan" />
@@ -659,7 +647,7 @@
       <workItem from="1544070844400" duration="11622000" />
       <workItem from="1544091836397" duration="436000" />
       <workItem from="1544092349821" duration="271000" />
-      <workItem from="1544092800256" duration="3600000" />
+      <workItem from="1544092800256" duration="3852000" />
     </task>
     <task id="LOCAL-00001" summary="start2">
       <created>1544068500705</created>
@@ -675,13 +663,17 @@
       <option name="project" value="LOCAL" />
       <updated>1544085392822</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test完成">
+      <created>1544099691000</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544099691000</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyTest - 2018.12.06 at 18h 43m 55s.xml">
-      <configuration name="MyTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MyTest - 2018.12.06 at 18h 46m 01s.xml">
       <configuration name="MyTest" configurationId="JUnit" />
     </history-entry>
@@ -709,9 +701,12 @@
     <history-entry file="MyTest_Test1 - 2018.12.06 at 20h 30m 09s.xml">
       <configuration name="MyTest.Test1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MyTest_Test1 - 2018.12.06 at 20h 35m 30s.xml">
+      <configuration name="MyTest.Test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21678000" />
+    <option name="totallyTimeSpent" value="21930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,6 +719,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24396783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -804,22 +800,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start2" />
     <MESSAGE value="可运行" />
-    <option name="LAST_COMMIT_MESSAGE" value="可运行" />
+    <MESSAGE value="Test完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java</url>
-          <line>20</line>
+          <line>23</line>
           <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java</url>
@@ -901,14 +892,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/DeviceExample.java">
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/DeviceExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/bean/Device.java">
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-337">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
@@ -1000,16 +991,6 @@
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/resources/com.cskaoyan.mapper/DeviceMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3451">
@@ -1051,8 +1032,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/test/java/com/cskaoyan/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/interceptor/AuthorizedInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
         </state>
       </provider>
     </entry>
