@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/ProductionERP.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+target/
+test/resources/
+/src/test/
+src/test/resources/
