@@ -1,4 +1,4 @@
-package com.cskaoyan.dao;
+package com.cskaoyan.domain;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

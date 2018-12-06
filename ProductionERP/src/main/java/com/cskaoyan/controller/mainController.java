@@ -1,6 +1,5 @@
 package com.cskaoyan.controller;
 
-import com.cskaoyan.dao.Device;
 import com.cskaoyan.mapper.DeviceMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

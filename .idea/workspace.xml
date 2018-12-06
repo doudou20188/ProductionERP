@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="090f7109-bebd-4808-81d6-88a29ec37e16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/impl/DeviceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/DeviceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/dao/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/service/DeviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductionERP/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductionERP/target/classes/applicationContext.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/ProductionERP/target/" />
@@ -101,7 +94,7 @@
         <counts>
           <entry key="JAVA" value="314" />
           <entry key="JSP" value="1" />
-          <entry key="PLAIN_TEXT" value="35" />
+          <entry key="PLAIN_TEXT" value="36" />
           <entry key="XML" value="116" />
         </counts>
       </usages-collector>
@@ -142,19 +135,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="308" column="9" lean-forward="true" selection-start-line="308" selection-start-column="9" selection-end-line="308" selection-end-column="9" />
+            <state relative-caret-position="94">
+              <caret line="79" column="103" lean-forward="true" selection-start-line="79" selection-start-column="103" selection-end-line="79" selection-end-column="103" />
               <folding>
                 <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
                 <element signature="n#sql#0;n#mapper#0;n#!!top" />
                 <element signature="n#sql#1;n#mapper#0;n#!!top" />
                 <element signature="n#sql#2;n#mapper#0;n#!!top" />
-                <element signature="n#select#0;n#mapper#0;n#!!top" />
                 <element signature="n#select#1;n#mapper#0;n#!!top" />
                 <element signature="n#delete#0;n#mapper#0;n#!!top" />
                 <element signature="n#delete#1;n#mapper#0;n#!!top" />
                 <element signature="n#insert#0;n#mapper#0;n#!!top" />
                 <element signature="n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
                 <element signature="n#if#0;n#select#2;n#mapper#0;n#!!top" />
                 <element signature="n#update#0;n#mapper#0;n#!!top" />
                 <element signature="n#update#1;n#mapper#0;n#!!top" />
@@ -554,7 +547,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544101755605" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544102759789" />
     <property name="last_opened_file_path" value="E:/王道/第三阶段SSM/HRM/参考实现/hrm_ssm_maven" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -718,7 +711,7 @@
       <workItem from="1544070844400" duration="11622000" />
       <workItem from="1544091836397" duration="436000" />
       <workItem from="1544092349821" duration="271000" />
-      <workItem from="1544092800256" duration="5814000" />
+      <workItem from="1544092800256" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="start2">
       <created>1544068500705</created>
@@ -748,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544100026825</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="统一结构2">
+      <created>1544101895962</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544101895962</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -784,7 +784,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23892000" />
+    <option name="totallyTimeSpent" value="24668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,6 +797,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24396783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -879,7 +880,8 @@
     <MESSAGE value="可运行" />
     <MESSAGE value="Test完成" />
     <MESSAGE value="统一结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="统一结构" />
+    <MESSAGE value="统一结构2" />
+    <option name="LAST_COMMIT_MESSAGE" value="统一结构2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1154,19 +1156,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductionERP/src/main/java/com/cskaoyan/mapper/DeviceMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="308" column="9" lean-forward="true" selection-start-line="308" selection-start-column="9" selection-end-line="308" selection-end-column="9" />
+        <state relative-caret-position="94">
+          <caret line="79" column="103" lean-forward="true" selection-start-line="79" selection-start-column="103" selection-end-line="79" selection-end-column="103" />
           <folding>
             <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
             <element signature="n#sql#0;n#mapper#0;n#!!top" />
             <element signature="n#sql#1;n#mapper#0;n#!!top" />
             <element signature="n#sql#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
             <element signature="n#select#1;n#mapper#0;n#!!top" />
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
             <element signature="n#delete#1;n#mapper#0;n#!!top" />
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
             <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
             <element signature="n#if#0;n#select#2;n#mapper#0;n#!!top" />
             <element signature="n#update#0;n#mapper#0;n#!!top" />
             <element signature="n#update#1;n#mapper#0;n#!!top" />
