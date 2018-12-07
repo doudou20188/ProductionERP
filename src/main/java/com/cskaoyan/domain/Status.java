@@ -34,4 +34,13 @@ public class Status {
     public void setData(String data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "Status{" +
+                "status='" + status + '\'' +
+                ", msg='" + msg + '\'' +
+                ", data='" + data + '\'' +
+                '}';
+    }
 }

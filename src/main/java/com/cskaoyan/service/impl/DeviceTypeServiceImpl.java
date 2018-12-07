@@ -47,13 +47,25 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
 
     @Override
     public Status insert(DeviceType deviceType) {
-//        deviceTypeMapper
-//        Status status =new Status();
-//        if (b>0){
-//            status.setMsg("OK");
-//            status.setData("");
-//            status.setStatus("200");
-//        }
-        return null;
+        int b=deviceTypeMapper.insertDeviceType(deviceType);
+        Status status =new Status();
+        if (b>0){
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
+    }
+
+    @Override
+    public Status update(DeviceType deviceType) {
+        int b=deviceTypeMapper.updateDeviceType(deviceType);
+        Status status =new Status();
+        if (b>0){
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
     }
 }

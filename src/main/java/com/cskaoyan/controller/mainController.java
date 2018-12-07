@@ -24,7 +24,6 @@ public class mainController {
         activeUser.setLocked("1");
         activeUser.setRolename("订单管理员");
         session.setAttribute("activeUser",activeUser);
-        System.out.println(name);
         return name;
     }
 }

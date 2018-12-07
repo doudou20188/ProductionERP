@@ -11,4 +11,6 @@ public interface DeviceTypeService {
     Status deleteByPrimaryKey(String ids);
 
     Status insert(DeviceType deviceType);
+
+    Status update(DeviceType deviceType);
 }

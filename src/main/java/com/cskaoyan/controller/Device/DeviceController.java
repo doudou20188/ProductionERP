@@ -39,4 +39,8 @@ public class DeviceController {
         }
         return "deviceType";
     }
+    @RequestMapping("deviceList")
+    public String deviceList(){
+        return "deviceList";
+    }
 }

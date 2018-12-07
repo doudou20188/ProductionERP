@@ -80,7 +80,22 @@ public class DeviceTypeController {
         return "deviceType_add";
     }
     @RequestMapping("insert")
+    @ResponseBody
     public Status insert(DeviceType deviceType){
         return deviceTypeService.insert(deviceType);
+    }
+    @RequestMapping("edit_judge")
+    @ResponseBody
+    public Status edit_judge(){
+        return null;
+    }
+    @RequestMapping("edit")
+    public String edit(){
+        return "deviceType_edit";
+    }
+    @RequestMapping("update")
+    @ResponseBody
+    public Status update(DeviceType deviceType){
+        return deviceTypeService.update(deviceType);
     }
 }
