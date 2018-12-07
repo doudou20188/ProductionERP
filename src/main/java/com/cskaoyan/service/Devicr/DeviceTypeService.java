@@ -1,8 +1,8 @@
-package com.cskaoyan.service;
+package com.cskaoyan.service.Devicr;
 
-import com.cskaoyan.domain.DeviceType;
-import com.cskaoyan.domain.DeviceTypeListVO;
-import com.cskaoyan.domain.Status;
+import com.cskaoyan.domain.Device.DeviceType;
+import com.cskaoyan.domain.Device.DeviceTypeListVO;
+import com.cskaoyan.domain.Device.Status;
 
 public interface DeviceTypeService {
 

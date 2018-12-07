@@ -1,8 +1,6 @@
-package com.cskaoyan.mapper;
+package com.cskaoyan.mapper.Device;
 
-import com.cskaoyan.domain.DeviceType;
-
-import org.apache.ibatis.annotations.Param;
+import com.cskaoyan.domain.Device.DeviceType;
 
 import java.util.List;
 
