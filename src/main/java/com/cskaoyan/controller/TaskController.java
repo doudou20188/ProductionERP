@@ -9,10 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Auther: YangTao
@@ -168,6 +165,65 @@ public class TaskController {
 
         return hashMap;
     }
+    /**
+     * 删除 delete
+     */
+    @ResponseBody
+    @RequestMapping("task/delete_judge")
+    public Map  deleteJudge(String page, String row, HttpSession session){
+        //这里貌似什么都没有做.增加页面判定?
+        HashMap hashMap = new HashMap();
+        return hashMap;
+
+    }
+    //task/delete_batch
+    @ResponseBody
+    @RequestMapping("task/delete_batch")
+    public Map deleteBatch(String[] ids){
+       // System.out.println(Arrays.toString(ids));
+        HashMap hashMap = new HashMap();
+        boolean b =false;
+        for (String id:
+             ids) {
+             b = taskService.deleteTaskById(id);
+             if (b==false){
+                 break;
+             }
+        }
+
+        if (b){
+            hashMap.put("status",200);
+            hashMap.put("msg","OK");
+            hashMap.put("data",null);
+
+        }else {
+            hashMap.put("status",100);
+            hashMap.put("msg","error");
+            hashMap.put("data",null);
+
+        }
+        return hashMap;
+
+    }
+    /**
+     * 条件查询框
+     */
+    @ResponseBody
+    @RequestMapping("task/search_task_by_taskId")
+    public Map searchTaskByID(String searchValue,String Page,String rows){
+        System.out.println(searchValue+" "+Page+" "+rows);
+        HashMap hashMap = new HashMap();
+        ArrayList<Task> tasksList = new ArrayList<Task>();
+        Task task=taskService.findTaskById(searchValue);
+        tasksList.add(task);
+        hashMap.put("total",tasksList.size());
+        hashMap.put("rows",tasksList);
+        return hashMap;
+
+
+    }
+
+
 
 
 
