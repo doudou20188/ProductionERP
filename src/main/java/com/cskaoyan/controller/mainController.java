@@ -1,10 +1,12 @@
 package com.cskaoyan.controller;
 
-import com.cskaoyan.mapper.DeviceMapper;
+import com.cskaoyan.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Demo class
@@ -14,10 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 public class mainController {
-    @Autowired
-    DeviceMapper deviceMapper;
     @RequestMapping("/{name}")
-    public String main(@PathVariable String name){
+    public String main(@PathVariable String name, HttpSession session){
+        User activeUser=new User();
+        activeUser.setUsername("aa");
+        activeUser.setPassword("aa");
+        activeUser.setLocked("1");
+        activeUser.setRolename("订单管理员");
+        session.setAttribute("activeUser",activeUser);
         System.out.println(name);
         return name;
     }

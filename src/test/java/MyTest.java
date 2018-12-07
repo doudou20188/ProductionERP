@@ -1,13 +1,11 @@
-import com.cskaoyan.domain.Device;
-import com.cskaoyan.mapper.DeviceMapper;
+import com.cskaoyan.domain.DeviceTypeListVO;
+import com.cskaoyan.service.DeviceTypeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-
-import java.util.List;
 
 /**
  * Demo class
@@ -19,11 +17,20 @@ import java.util.List;
 @ContextConfiguration("classpath:applicationContext.xml")
 @WebAppConfiguration
 public class MyTest {
+   /* @Autowired
+    DeviceTypeMapper deviceTypeMapper;*/
+
+
     @Autowired
-    DeviceMapper deviceMapper;
+    DeviceTypeService deviceTypeService;
     @Test
     public void Test1(){
-        List<Device> devices = deviceMapper.deviceList();
-        System.out.println(devices);
+      /*  List<DeviceType> devices = deviceTypeMapper.deviceTypeList();
+        System.out.println(devices);*/
+    }
+    @Test
+    public void Test2(){
+        DeviceTypeListVO deviceTypeListVO = deviceTypeService.deviceTypeList("1", "2");
+        System.out.println(deviceTypeListVO);
     }
 }

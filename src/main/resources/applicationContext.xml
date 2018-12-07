@@ -46,10 +46,7 @@
     <!--<property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>-->
 
 
-    <bean id="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="datasource"></property>
-        <property name="configLocation" value="classpath:mybatis.xml"></property>
-    </bean>
+
 
     <!--扫描mybatis的xml映射文件-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -64,6 +61,33 @@
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="datasource"></property>
+    </bean>
+
+    <!--原sql配置-->
+    <!--<bean id="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="datasource"></property>-->
+        <!--<property name="configLocation" value="classpath:mybatis.xml"></property>-->
+    <!--</bean>-->
+    <!--分页配置-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="datasource"/>
+        <property name="mapperLocations">
+            <array>
+                <value>classpath:com/cskaoyan/mapper/*.xml</value>
+            </array>
+        </property>
+         <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <!-- 这里的几个配置主要演示如何使用，如果不理解，一定要去掉下面的配置 -->
+                    <property name="properties">
+                        <value>
+                            helperDialect=mysql
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
 
 </beans>

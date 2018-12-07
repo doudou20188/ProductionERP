@@ -28,7 +28,7 @@ public class Device {
 
     @Override
     public String toString() {
-        return "DeviceService{" +
+        return "DeviceTypeService{" +
                 "deviceId='" + deviceId + '\'' +
                 ", deviceName='" + deviceName + '\'' +
                 ", deviceTypeId='" + deviceTypeId + '\'' +

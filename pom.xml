@@ -91,15 +91,17 @@
             <version>1.2.17</version>
         </dependency>
         <!-- Mybatis -->
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.2.8</version>
+            <version>3.4.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>1.2.2</version>
+            <version>1.3.1</version>
         </dependency>
         <dependency>
             <groupId>com.github.miemiedev</groupId>
@@ -111,7 +113,7 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
-            <version>4.0.0</version>
+            <version>5.1.8</version>
         </dependency>
         <!-- MySql -->
         <dependency>
@@ -120,13 +122,13 @@
             <version>8.0.11</version>
         </dependency>
         <!-- 连接池 -->
-
-        <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.2</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.8</version>
         </dependency>
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
