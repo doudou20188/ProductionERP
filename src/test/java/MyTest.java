@@ -1,5 +1,3 @@
-package com.cskaoyan;
-
 import com.cskaoyan.domain.Device;
 import com.cskaoyan.mapper.DeviceMapper;
 import org.junit.Test;
@@ -8,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+
+import java.util.List;
 
 /**
  * Demo class
@@ -23,7 +23,7 @@ public class MyTest {
     DeviceMapper deviceMapper;
     @Test
     public void Test1(){
-        Device device = deviceMapper.selectByPrimaryKey("001");
-        System.out.println(device);
+        List<Device> devices = deviceMapper.deviceList();
+        System.out.println(devices);
     }
 }

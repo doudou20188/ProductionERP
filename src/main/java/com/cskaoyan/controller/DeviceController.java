@@ -1,6 +1,7 @@
 package com.cskaoyan.controller;
 
 import com.cskaoyan.domain.Device;
+import com.cskaoyan.domain.DeviceTypeListVO;
 import com.cskaoyan.service.DeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,10 +34,20 @@ public class DeviceController {
     public String deviceList(){
         return "deviceList";
     }
+    @RequestMapping("device/deviceType")
+    public String deviceType(){
+        return "deviceType";
+    }
     @RequestMapping("deviceList/list")
     @ResponseBody
     public List<Device> list(String page,String rows){
 
+        System.out.println(page+"-"+rows);
+        return null;
+    }
+    @RequestMapping("/deviceType/list")
+    public DeviceTypeListVO deviceTypeList(String page, String rows){
+        deviceService.deviceTypeList(page,rows);
         System.out.println(page+"-"+rows);
         return null;
     }
