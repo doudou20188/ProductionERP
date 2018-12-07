@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mapper.unqualify_applyMapper.unqualify_applyMapper">
+  <resultMap id="BaseResultMap" type="com.cskaoyan.domain.unqualify_apply.unqualify_apply">
+    <id column="unqualify_apply_id" jdbcType="VARCHAR" property="unqualifyApplyId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="unqualify_item" jdbcType="VARCHAR" property="unqualifyItem" />
+    <result column="unqualify_count" jdbcType="INTEGER" property="unqualifyCount" />
+    <result column="assembly_date" jdbcType="TIMESTAMP" property="assemblyDate" />
+    <result column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="apply_date" jdbcType="TIMESTAMP" property="applyDate" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+
+<!--这些是我写的，其他的是自动生成的-->
+  <insert id="addUnqualify_apply" parameterType="com.cskaoyan.domain.unqualify_apply.unqualify_apply">
+    insert into unqualify_apply (unqualify_apply_id, product_id, unqualify_item,
+      unqualify_count, assembly_date, emp_id,
+      apply_date, note)
+    values (#{unqualify_apply.unqualifyApplyId}, #{unqualify_apply.productId}, #{unqualify_apply.unqualifyItem},
+      #{unqualify_apply.unqualifyCount}, #{unqualify_apply.assemblyDate}, #{unqualify_apply.empId},
+      #{unqualify_apply.applyDate}, #{unqualify_apply.note})
+  </insert>
+
+
+
+  <resultMap id="BaseProductMap" type="com.cskaoyan.domain.unqualify_apply.product">
+    <id column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_type" jdbcType="DOUBLE" property="productType" />
+    <result column="image" jdbcType="DOUBLE" property="image" />
+    <result column="note" jdbcType="INTEGER" property="note" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Product_List">
+    product_id, product_name, product_type,image,note,status
+  </sql>
+  <select id="selectAllProduct"  resultMap="BaseProductMap">
+    select
+    <include refid="Base_Product_List" />
+    from product
+  </select>
+
+
+
+
+
+  <resultMap id="BaseEmployeeMap" type="com.cskaoyan.domain.unqualify_apply.employee">
+    <id column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="id_code" jdbcType="VARCHAR" property="idCode" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="join_date" jdbcType="DATE" property="joinDate" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
+    <result column="education_form" jdbcType="VARCHAR" property="educationForm" />
+    <result column="department_id" jdbcType="VARCHAR" property="departmentId" />
+  </resultMap>
+  <sql id="Base_Employee_List">
+    emp_id, emp_name, sex, id_code, birthday, join_date, status, education, degree, major,
+    graduate_school, education_form, department_id
+  </sql>
+  <select id="selectAllEmployee"  resultMap="BaseEmployeeMap">
+    select
+    <include refid="Base_Employee_List" />
+    from employee
+  </select>
+
+
+
+
+  <select id="selectproductNameById"  resultType="String">
+    select
+   product_name
+    from product
+    where product_id = #{productId}
+  </select>
+
+
+
+
+  <select id="selectempNameById"  resultType="String">
+    select
+  emp_name
+    from employee
+    where emp_id = #{empId}
+  </select>
+
+
+
+
+
+  <resultMap id="BaseDepartmentMap" type="com.cskaoyan.domain.unqualify_apply.department">
+      <id column="department_id" jdbcType="VARCHAR" property="departmentId" />
+      <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
+      <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+
+
+  <sql id="Base_department_List">
+    department_id, department_name, note
+  </sql>
+  <select id="selectAllDepartment"  resultMap="BaseDepartmentMap">
+    select
+    <include refid="Base_department_List" />
+    from department
+
+  </select>
+
+
+
+
+  <sql id="Base_Column_List">
+    unqualify_apply_id, product_id, unqualify_item, unqualify_count, assembly_date, emp_id,
+    apply_date, note
+  </sql>
+
+  <select id="selectAllQualifyMessage"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from unqualify_apply
+
+  </select>
+<!--这些是自动生成的-->
+
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from unqualify_apply
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from unqualify_apply
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cskaoyan.domain.unqualify_apply.unqualify_apply">
+    insert into unqualify_apply (unqualify_apply_id, product_id, unqualify_item, 
+      unqualify_count, assembly_date, emp_id, 
+      apply_date, note)
+    values (#{unqualifyApplyId,jdbcType=VARCHAR}, #{productId,jdbcType=VARCHAR}, #{unqualifyItem,jdbcType=VARCHAR}, 
+      #{unqualifyCount,jdbcType=INTEGER}, #{assemblyDate,jdbcType=TIMESTAMP}, #{empId,jdbcType=VARCHAR}, 
+      #{applyDate,jdbcType=TIMESTAMP}, #{note,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cskaoyan.domain.unqualify_apply.unqualify_apply">
+    insert into unqualify_apply
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="unqualifyApplyId != null">
+        unqualify_apply_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="unqualifyItem != null">
+        unqualify_item,
+      </if>
+      <if test="unqualifyCount != null">
+        unqualify_count,
+      </if>
+      <if test="assemblyDate != null">
+        assembly_date,
+      </if>
+      <if test="empId != null">
+        emp_id,
+      </if>
+      <if test="applyDate != null">
+        apply_date,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="unqualifyApplyId != null">
+        #{unqualifyApplyId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyItem != null">
+        #{unqualifyItem,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyCount != null">
+        #{unqualifyCount,jdbcType=INTEGER},
+      </if>
+      <if test="assemblyDate != null">
+        #{assemblyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        #{empId,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDate != null">
+        #{applyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cskaoyan.domain.unqualify_apply.unqualify_apply">
+    update unqualify_apply
+    <set>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyItem != null">
+        unqualify_item = #{unqualifyItem,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyCount != null">
+        unqualify_count = #{unqualifyCount,jdbcType=INTEGER},
+      </if>
+      <if test="assemblyDate != null">
+        assembly_date = #{assemblyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        emp_id = #{empId,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDate != null">
+        apply_date = #{applyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cskaoyan.domain.unqualify_apply.unqualify_apply">
+    update unqualify_apply
+    set product_id = #{productId,jdbcType=VARCHAR},
+      unqualify_item = #{unqualifyItem,jdbcType=VARCHAR},
+      unqualify_count = #{unqualifyCount,jdbcType=INTEGER},
+      assembly_date = #{assemblyDate,jdbcType=TIMESTAMP},
+      emp_id = #{empId,jdbcType=VARCHAR},
+      apply_date = #{applyDate,jdbcType=TIMESTAMP},
+      note = #{note,jdbcType=VARCHAR}
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </update>
+</mapper>
