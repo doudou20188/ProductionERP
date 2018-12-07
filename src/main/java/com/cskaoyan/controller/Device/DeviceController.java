@@ -25,6 +25,7 @@ public class DeviceController {
      * @Param [session]
      * @return java.lang.String
      * 设备种类转发jsp组件的控制器
+     * 黑洞
      */
     @RequestMapping("deviceType")
     public String deviceType(HttpSession session){
