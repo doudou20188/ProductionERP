@@ -1,10 +1,10 @@
-package com.cskaoyan.service.impl;
+package com.cskaoyan.service.Devicr.impl;
 
-import com.cskaoyan.domain.DeviceType;
-import com.cskaoyan.domain.DeviceTypeListVO;
-import com.cskaoyan.domain.Status;
-import com.cskaoyan.mapper.DeviceTypeMapper;
-import com.cskaoyan.service.DeviceTypeService;
+import com.cskaoyan.domain.Device.DeviceType;
+import com.cskaoyan.domain.Device.DeviceTypeListVO;
+import com.cskaoyan.domain.Device.Status;
+import com.cskaoyan.mapper.Device.DeviceTypeMapper;
+import com.cskaoyan.service.Devicr.DeviceTypeService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,13 +47,25 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
 
     @Override
     public Status insert(DeviceType deviceType) {
-//        deviceTypeMapper
-//        Status status =new Status();
-//        if (b>0){
-//            status.setMsg("OK");
-//            status.setData("");
-//            status.setStatus("200");
-//        }
-        return null;
+        int b=deviceTypeMapper.insertDeviceType(deviceType);
+        Status status =new Status();
+        if (b>0){
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
+    }
+
+    @Override
+    public Status update(DeviceType deviceType) {
+        int b=deviceTypeMapper.updateDeviceType(deviceType);
+        Status status =new Status();
+        if (b>0){
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
     }
 }

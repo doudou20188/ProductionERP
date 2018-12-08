@@ -1,15 +1,13 @@
 package com.cskaoyan.controller.Device;
 
-import com.cskaoyan.domain.*;
-import com.cskaoyan.service.DeviceTypeService;
+import com.cskaoyan.domain.Device.DeviceType;
+import com.cskaoyan.domain.Device.DeviceTypeListVO;
+import com.cskaoyan.domain.Device.Status;
+import com.cskaoyan.service.Devicr.DeviceTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 该控制器主要控制设备类型相关文件
@@ -80,7 +78,22 @@ public class DeviceTypeController {
         return "deviceType_add";
     }
     @RequestMapping("insert")
+    @ResponseBody
     public Status insert(DeviceType deviceType){
         return deviceTypeService.insert(deviceType);
+    }
+    @RequestMapping("edit_judge")
+    @ResponseBody
+    public Status edit_judge(){
+        return null;
+    }
+    @RequestMapping("edit")
+    public String edit(){
+        return "deviceType_edit";
+    }
+    @RequestMapping("update")
+    @ResponseBody
+    public Status update(DeviceType deviceType){
+        return deviceTypeService.update(deviceType);
     }
 }

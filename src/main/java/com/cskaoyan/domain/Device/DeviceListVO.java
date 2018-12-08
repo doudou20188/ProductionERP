@@ -1,17 +1,17 @@
-package com.cskaoyan.domain;
+package com.cskaoyan.domain.Device;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Demo class
  *
  * @Author lyboy
- * @Date 2018/12/6 21:42
+ * @Date 2018/12/6 21:31
+ * 将bean转换为Json的bean
  **/
-public class DeviceTypeListVO {
+public class DeviceListVO {
     int total;
-    DeviceType[] rows;
+    Device[] rows;
 
     public int getTotal() {
         return total;
@@ -21,17 +21,17 @@ public class DeviceTypeListVO {
         this.total = total;
     }
 
-    public DeviceType[] getRows() {
+    public Device[] getRows() {
         return rows;
     }
 
-    public void setRows(DeviceType[] rows) {
+    public void setRows(Device[] rows) {
         this.rows = rows;
     }
 
     @Override
     public String toString() {
-        return "DeviceTypeListVO{" +
+        return "DeviceListVO{" +
                 "total=" + total +
                 ", rows=" + Arrays.toString(rows) +
                 '}';

@@ -1,4 +1,4 @@
-package com.cskaoyan.domain;
+package com.cskaoyan.domain.Device;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -26,9 +26,28 @@ public class Device {
 
     private String note;
 
+    private String deviceTypeName;
+    private String deviceKeeper;
+
+    public String getDeviceTypeName() {
+        return deviceTypeName;
+    }
+
+    public void setDeviceTypeName(String deviceTypeName) {
+        this.deviceTypeName = deviceTypeName;
+    }
+
+    public String getDeviceKeeper() {
+        return deviceKeeper;
+    }
+
+    public void setDeviceKeeper(String deviceKeeper) {
+        this.deviceKeeper = deviceKeeper;
+    }
+
     @Override
     public String toString() {
-        return "DeviceTypeService{" +
+        return "Device{" +
                 "deviceId='" + deviceId + '\'' +
                 ", deviceName='" + deviceName + '\'' +
                 ", deviceTypeId='" + deviceTypeId + '\'' +
@@ -40,6 +59,8 @@ public class Device {
                 ", deviceServiceLife=" + deviceServiceLife +
                 ", deviceKeeperId='" + deviceKeeperId + '\'' +
                 ", note='" + note + '\'' +
+                ", deviceTypeName='" + deviceTypeName + '\'' +
+                ", deviceKeeper='" + deviceKeeper + '\'' +
                 '}';
     }
 
