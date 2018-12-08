@@ -1,4 +1,6 @@
-package com.cskaoyan.domain.Device;
+package com.cskaoyan.domain.device.vo;
+
+import com.cskaoyan.domain.device.Device;
 
 import java.util.Arrays;
 

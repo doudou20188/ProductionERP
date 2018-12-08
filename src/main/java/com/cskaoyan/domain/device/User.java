@@ -1,4 +1,4 @@
-package com.cskaoyan.domain.Device;
+package com.cskaoyan.domain.device;
 
 /**
  * Demo class

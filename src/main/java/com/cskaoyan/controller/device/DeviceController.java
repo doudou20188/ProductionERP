@@ -1,12 +1,13 @@
-package com.cskaoyan.controller.Device;
+package com.cskaoyan.controller.device;
 
-import com.cskaoyan.domain.Device.Device;
-import com.cskaoyan.domain.Device.DeviceListVO;
-import com.cskaoyan.domain.Device.Status;
-import com.cskaoyan.domain.Device.User;
-import com.cskaoyan.service.Devicr.DeviceService;
+import com.cskaoyan.domain.device.Device;
+import com.cskaoyan.domain.device.Status;
+import com.cskaoyan.domain.device.User;
+import com.cskaoyan.domain.device.vo.DeviceListVO;
+import com.cskaoyan.service.devicr.DeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -45,6 +46,19 @@ public class DeviceController {
             session.setAttribute("sysPermissionList",sysPermissionList);
         }
         return "deviceType";
+    }
+
+    @RequestMapping("device/deviceCheck")
+    public String deviceCheck(HttpSession session) {
+        User activeuser = (User) session.getAttribute("activeUser");
+        if (activeuser.getLocked().equals("1")) {
+            List<String> sysPermissionList = new ArrayList<>();
+            sysPermissionList.add("deviceCheck:add");
+            sysPermissionList.add("deviceCheck:edit");
+            sysPermissionList.add("deviceCheck:delete");
+            session.setAttribute("sysPermissionList", sysPermissionList);
+        }
+        return "deviceCheck";
     }
     @RequestMapping("device/deviceList")
     public String deviceList(HttpSession session) {
@@ -119,5 +133,17 @@ public class DeviceController {
     public Status updateNote(String deviceId, String note) {
         Status status = deviceService.updateNote(deviceId, note);
         return status;
+    }
+
+    @RequestMapping("deviceList/get/{id}")
+    @ResponseBody
+    public Device get(@PathVariable String id) {
+        return deviceService.get(id);
+    }
+
+    @RequestMapping("deviceList/get_data")
+    @ResponseBody
+    public Device[] getData() {
+        return deviceService.getData();
     }
 }

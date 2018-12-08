@@ -1,4 +1,4 @@
-package com.cskaoyan.domain.Device;
+package com.cskaoyan.domain.device;
 
 public class Device {
     private String deviceId;
@@ -28,7 +28,7 @@ public class Device {
 
     @Override
     public String toString() {
-        return "Device{" +
+        return "device{" +
                 "deviceId='" + deviceId + '\'' +
                 ", deviceName='" + deviceName + '\'' +
                 ", deviceTypeId='" + deviceTypeId + '\'' +

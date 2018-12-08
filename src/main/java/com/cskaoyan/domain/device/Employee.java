@@ -1,6 +1,4 @@
-package com.cskaoyan.domain.Device;
-
-import java.util.Date;
+package com.cskaoyan.domain.device;
 
 public class Employee {
     private String empId;

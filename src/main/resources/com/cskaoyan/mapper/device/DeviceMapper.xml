@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cskaoyan.mapper.Device.DeviceMapper">
-    <resultMap id="BaseResultMap" type="com.cskaoyan.domain.Device.Device">
+<mapper namespace="com.cskaoyan.mapper.device.DeviceMapper">
+    <resultMap id="BaseResultMap" type="com.cskaoyan.domain.device.Device">
         <id column="device_id" jdbcType="VARCHAR" property="deviceId"/>
         <result column="device_name" jdbcType="VARCHAR" property="deviceName"/>
         <result column="device_type_id" jdbcType="VARCHAR" property="deviceTypeId"/>
@@ -37,7 +37,7 @@ LEFT JOIN device_type AS dt ON dv.device_type_id = dt.device_type_id
 INNER JOIN employee ON employee.emp_id = dv.device_keeper_id
 
     </select>
-    <insert id="inserDevice" parameterType="com.cskaoyan.domain.Device.Device">
+    <insert id="inserDevice" parameterType="com.cskaoyan.domain.device.Device">
         insert into device (device_id, device_name, device_type_id,
       device_status_id, device_status, device_purchase_date,
       device_purchase_price, device_manufacture_date,
@@ -49,7 +49,7 @@ INNER JOIN employee ON employee.emp_id = dv.device_keeper_id
       #{deviceServiceLife,jdbcType=TIMESTAMP}, #{deviceKeeperId,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}
       )
     </insert>
-    <update id="updateDevice" parameterType="com.cskaoyan.domain.Device.Device">
+    <update id="updateDevice" parameterType="com.cskaoyan.domain.device.Device">
     update device
     set device_name = #{deviceName,jdbcType=VARCHAR},
       device_type_id = #{deviceTypeId,jdbcType=VARCHAR},
@@ -71,4 +71,25 @@ INNER JOIN employee ON employee.emp_id = dv.device_keeper_id
     update device set note = #{param2,jdbcType=VARCHAR}
     where device_id = #{param1,jdbcType=VARCHAR}
     </update>
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+dv.device_id,
+dv.device_name,
+dt.device_type_id,
+dv.device_status_id,
+dv.device_status,
+dv.device_purchase_date,
+dv.device_purchase_price,
+dv.device_manufacture_date,
+dv.device_service_life,
+dv.note,
+dt.device_type_name,
+employee.emp_name AS device_keeper,
+dv.device_keeper_id
+FROM
+device AS dv
+LEFT JOIN device_type AS dt ON dv.device_type_id = dt.device_type_id
+INNER JOIN employee ON employee.emp_id = dv.device_keeper_id
+WHERE device_id = #{deviceId,jdbcType=VARCHAR}
+    </select>
 </mapper>

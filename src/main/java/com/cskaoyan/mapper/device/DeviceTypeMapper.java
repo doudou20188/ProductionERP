@@ -1,6 +1,6 @@
-package com.cskaoyan.mapper.Device;
+package com.cskaoyan.mapper.device;
 
-import com.cskaoyan.domain.Device.DeviceType;
+import com.cskaoyan.domain.device.DeviceType;
 
 import java.util.List;
 

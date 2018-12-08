@@ -1,8 +1,8 @@
-package com.cskaoyan.service.Devicr;
+package com.cskaoyan.service.devicr;
 
-import com.cskaoyan.domain.Device.Device;
-import com.cskaoyan.domain.Device.DeviceListVO;
-import com.cskaoyan.domain.Device.Status;
+import com.cskaoyan.domain.device.Device;
+import com.cskaoyan.domain.device.Status;
+import com.cskaoyan.domain.device.vo.DeviceListVO;
 
 public interface DeviceService {
     DeviceListVO selectList(String page, String rows);
@@ -14,4 +14,8 @@ public interface DeviceService {
     Status deleteByPrimaryKey(String ids);
 
     Status updateNote(String deviceId, String note);
+
+    Device get(String id);
+
+    Device[] getData();
 }

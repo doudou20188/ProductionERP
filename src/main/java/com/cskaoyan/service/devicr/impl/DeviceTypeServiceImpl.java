@@ -1,10 +1,10 @@
-package com.cskaoyan.service.Devicr.impl;
+package com.cskaoyan.service.devicr.impl;
 
-import com.cskaoyan.domain.Device.DeviceType;
-import com.cskaoyan.domain.Device.DeviceTypeListVO;
-import com.cskaoyan.domain.Device.Status;
-import com.cskaoyan.mapper.Device.DeviceTypeMapper;
-import com.cskaoyan.service.Devicr.DeviceTypeService;
+import com.cskaoyan.domain.device.DeviceType;
+import com.cskaoyan.domain.device.Status;
+import com.cskaoyan.domain.device.vo.DeviceTypeListVO;
+import com.cskaoyan.mapper.device.DeviceTypeMapper;
+import com.cskaoyan.service.devicr.DeviceTypeService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,9 +1,9 @@
-package com.cskaoyan.controller.Device;
+package com.cskaoyan.controller.device;
 
-import com.cskaoyan.domain.Device.DeviceType;
-import com.cskaoyan.domain.Device.DeviceTypeListVO;
-import com.cskaoyan.domain.Device.Status;
-import com.cskaoyan.service.Devicr.DeviceTypeService;
+import com.cskaoyan.domain.device.DeviceType;
+import com.cskaoyan.domain.device.Status;
+import com.cskaoyan.domain.device.vo.DeviceTypeListVO;
+import com.cskaoyan.service.devicr.DeviceTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

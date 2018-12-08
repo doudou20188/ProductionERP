@@ -1,6 +1,6 @@
-package com.cskaoyan.mapper.Device;
+package com.cskaoyan.mapper.device;
 
-import com.cskaoyan.domain.Device.Device;
+import com.cskaoyan.domain.device.Device;
 
 import java.util.List;
 
@@ -14,4 +14,6 @@ public interface DeviceMapper {
     int deleteByPrimaryKey(String deviceId);
 
     int updateNote(String deviceId, String note);
+
+    Device get(String id);
 }

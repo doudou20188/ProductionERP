@@ -1,6 +1,6 @@
 package com.cskaoyan.controller;
 
-import com.cskaoyan.domain.Device.User;
+import com.cskaoyan.domain.device.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
