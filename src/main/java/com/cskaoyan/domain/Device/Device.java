@@ -1,8 +1,5 @@
 package com.cskaoyan.domain.Device;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 public class Device {
     private String deviceId;
 
@@ -14,13 +11,13 @@ public class Device {
 
     private String deviceStatus;
 
-    private Date devicePurchaseDate;
+    private String devicePurchaseDate;
 
-    private BigDecimal devicePurchasePrice;
+    private String devicePurchasePrice;
 
-    private Date deviceManufactureDate;
+    private String deviceManufactureDate;
 
-    private Date deviceServiceLife;
+    private String deviceServiceLife;
 
     private String deviceKeeperId;
 
@@ -28,6 +25,113 @@ public class Device {
 
     private String deviceTypeName;
     private String deviceKeeper;
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "deviceId='" + deviceId + '\'' +
+                ", deviceName='" + deviceName + '\'' +
+                ", deviceTypeId='" + deviceTypeId + '\'' +
+                ", deviceStatusId='" + deviceStatusId + '\'' +
+                ", deviceStatus='" + deviceStatus + '\'' +
+                ", devicePurchaseDate='" + devicePurchaseDate + '\'' +
+                ", devicePurchasePrice='" + devicePurchasePrice + '\'' +
+                ", deviceManufactureDate='" + deviceManufactureDate + '\'' +
+                ", deviceServiceLife='" + deviceServiceLife + '\'' +
+                ", deviceKeeperId='" + deviceKeeperId + '\'' +
+                ", note='" + note + '\'' +
+                ", deviceTypeName='" + deviceTypeName + '\'' +
+                ", deviceKeeper='" + deviceKeeper + '\'' +
+                '}';
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    public String getDeviceName() {
+        return deviceName;
+    }
+
+    public void setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+    }
+
+    public String getDeviceTypeId() {
+        return deviceTypeId;
+    }
+
+    public void setDeviceTypeId(String deviceTypeId) {
+        this.deviceTypeId = deviceTypeId;
+    }
+
+    public String getDeviceStatusId() {
+        return deviceStatusId;
+    }
+
+    public void setDeviceStatusId(String deviceStatusId) {
+        this.deviceStatusId = deviceStatusId;
+    }
+
+    public String getDeviceStatus() {
+        return deviceStatus;
+    }
+
+    public void setDeviceStatus(String deviceStatus) {
+        this.deviceStatus = deviceStatus;
+    }
+
+    public String getDevicePurchaseDate() {
+        return devicePurchaseDate;
+    }
+
+    public void setDevicePurchaseDate(String devicePurchaseDate) {
+        this.devicePurchaseDate = devicePurchaseDate;
+    }
+
+    public String getDevicePurchasePrice() {
+        return devicePurchasePrice;
+    }
+
+    public void setDevicePurchasePrice(String devicePurchasePrice) {
+        this.devicePurchasePrice = devicePurchasePrice;
+    }
+
+    public String getDeviceManufactureDate() {
+        return deviceManufactureDate;
+    }
+
+    public void setDeviceManufactureDate(String deviceManufactureDate) {
+        this.deviceManufactureDate = deviceManufactureDate;
+    }
+
+    public String getDeviceServiceLife() {
+        return deviceServiceLife;
+    }
+
+    public void setDeviceServiceLife(String deviceServiceLife) {
+        this.deviceServiceLife = deviceServiceLife;
+    }
+
+    public String getDeviceKeeperId() {
+        return deviceKeeperId;
+    }
+
+    public void setDeviceKeeperId(String deviceKeeperId) {
+        this.deviceKeeperId = deviceKeeperId;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
 
     public String getDeviceTypeName() {
         return deviceTypeName;
@@ -43,112 +147,5 @@ public class Device {
 
     public void setDeviceKeeper(String deviceKeeper) {
         this.deviceKeeper = deviceKeeper;
-    }
-
-    @Override
-    public String toString() {
-        return "Device{" +
-                "deviceId='" + deviceId + '\'' +
-                ", deviceName='" + deviceName + '\'' +
-                ", deviceTypeId='" + deviceTypeId + '\'' +
-                ", deviceStatusId='" + deviceStatusId + '\'' +
-                ", deviceStatus='" + deviceStatus + '\'' +
-                ", devicePurchaseDate=" + devicePurchaseDate +
-                ", devicePurchasePrice=" + devicePurchasePrice +
-                ", deviceManufactureDate=" + deviceManufactureDate +
-                ", deviceServiceLife=" + deviceServiceLife +
-                ", deviceKeeperId='" + deviceKeeperId + '\'' +
-                ", note='" + note + '\'' +
-                ", deviceTypeName='" + deviceTypeName + '\'' +
-                ", deviceKeeper='" + deviceKeeper + '\'' +
-                '}';
-    }
-
-    public String getDeviceId() {
-        return deviceId;
-    }
-
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId == null ? null : deviceId.trim();
-    }
-
-    public String getDeviceName() {
-        return deviceName;
-    }
-
-    public void setDeviceName(String deviceName) {
-        this.deviceName = deviceName == null ? null : deviceName.trim();
-    }
-
-    public String getDeviceTypeId() {
-        return deviceTypeId;
-    }
-
-    public void setDeviceTypeId(String deviceTypeId) {
-        this.deviceTypeId = deviceTypeId == null ? null : deviceTypeId.trim();
-    }
-
-    public String getDeviceStatusId() {
-        return deviceStatusId;
-    }
-
-    public void setDeviceStatusId(String deviceStatusId) {
-        this.deviceStatusId = deviceStatusId == null ? null : deviceStatusId.trim();
-    }
-
-    public String getDeviceStatus() {
-        return deviceStatus;
-    }
-
-    public void setDeviceStatus(String deviceStatus) {
-        this.deviceStatus = deviceStatus == null ? null : deviceStatus.trim();
-    }
-
-    public Date getDevicePurchaseDate() {
-        return devicePurchaseDate;
-    }
-
-    public void setDevicePurchaseDate(Date devicePurchaseDate) {
-        this.devicePurchaseDate = devicePurchaseDate;
-    }
-
-    public BigDecimal getDevicePurchasePrice() {
-        return devicePurchasePrice;
-    }
-
-    public void setDevicePurchasePrice(BigDecimal devicePurchasePrice) {
-        this.devicePurchasePrice = devicePurchasePrice;
-    }
-
-    public Date getDeviceManufactureDate() {
-        return deviceManufactureDate;
-    }
-
-    public void setDeviceManufactureDate(Date deviceManufactureDate) {
-        this.deviceManufactureDate = deviceManufactureDate;
-    }
-
-    public Date getDeviceServiceLife() {
-        return deviceServiceLife;
-    }
-
-    public void setDeviceServiceLife(Date deviceServiceLife) {
-        this.deviceServiceLife = deviceServiceLife;
-    }
-
-    public String getDeviceKeeperId() {
-        return deviceKeeperId;
-    }
-
-    public void setDeviceKeeperId(String deviceKeeperId) {
-        this.deviceKeeperId = deviceKeeperId == null ? null : deviceKeeperId.trim();
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
     }
 }

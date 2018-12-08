@@ -12,4 +12,6 @@ public interface DeviceTypeMapper {
     public int insertDeviceType(DeviceType deviceType);
 
     public int updateDeviceType(DeviceType deviceType);
+
+    DeviceType selectByPrimaryKey(String ids);
 }

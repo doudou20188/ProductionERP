@@ -2,6 +2,7 @@ package com.cskaoyan.service.Devicr.impl;
 
 import com.cskaoyan.domain.Device.Device;
 import com.cskaoyan.domain.Device.DeviceListVO;
+import com.cskaoyan.domain.Device.Status;
 import com.cskaoyan.mapper.Device.DeviceMapper;
 import com.cskaoyan.service.Devicr.DeviceService;
 import com.github.pagehelper.PageHelper;
@@ -32,5 +33,53 @@ public class DeciveServiceImpl implements DeviceService {
         deviceListVO.setRows(devices);
         deviceListVO.setTotal(devices.length);
         return deviceListVO;
+    }
+
+    @Override
+    public Status insert(Device device) {
+        int b = deviceMapper.inserDevice(device);
+        Status status = new Status();
+        if (b > 0) {
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
+    }
+
+    @Override
+    public Status update(Device device) {
+        int b = deviceMapper.updateDevice(device);
+        Status status = new Status();
+        if (b > 0) {
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
+    }
+
+    @Override
+    public Status deleteByPrimaryKey(String deviceId) {
+        int b = deviceMapper.deleteByPrimaryKey(deviceId);
+        Status status = new Status();
+        if (b > 0) {
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
+    }
+
+    @Override
+    public Status updateNote(String deviceId, String note) {
+        int b = deviceMapper.updateNote(deviceId, note);
+        Status status = new Status();
+        if (b > 0) {
+            status.setMsg("OK");
+            status.setData("");
+            status.setStatus("200");
+        }
+        return status;
     }
 }

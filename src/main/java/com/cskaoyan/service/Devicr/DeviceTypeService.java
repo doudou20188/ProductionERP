@@ -13,4 +13,8 @@ public interface DeviceTypeService {
     Status insert(DeviceType deviceType);
 
     Status update(DeviceType deviceType);
+
+    DeviceType selectByPrimaryKey(String ids);
+
+    DeviceType[] get_data();
 }

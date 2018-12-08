@@ -68,4 +68,18 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
         }
         return status;
     }
+
+    @Override
+    public DeviceType selectByPrimaryKey(String ids) {
+        DeviceType deviceType = deviceTypeMapper.selectByPrimaryKey(ids);
+        return deviceType;
+    }
+
+    @Override
+    public DeviceType[] get_data() {
+        List<DeviceType> deviceTypeList = deviceTypeMapper.deviceTypeList();
+        DeviceType[] deviceTypes = new DeviceType[deviceTypeList.size()];
+        deviceTypeList.toArray(deviceTypes);
+        return deviceTypes;
+    }
 }

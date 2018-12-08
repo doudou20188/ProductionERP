@@ -6,6 +6,7 @@ import com.cskaoyan.domain.Device.Status;
 import com.cskaoyan.service.Devicr.DeviceTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -95,5 +96,24 @@ public class DeviceTypeController {
     @ResponseBody
     public Status update(DeviceType deviceType){
         return deviceTypeService.update(deviceType);
+    }
+
+    @RequestMapping("get/{ids}")
+    @ResponseBody
+    public DeviceType get(@PathVariable String ids) {
+        return deviceTypeService.selectByPrimaryKey(ids);
+    }
+
+    @RequestMapping("update_all")
+    @ResponseBody
+    public Status update_all(DeviceType deviceType) {
+        return deviceTypeService.update(deviceType);
+    }
+
+    @RequestMapping("get_data")
+    @ResponseBody
+    public DeviceType[] get_data() {
+        DeviceType[] deviceTypes = deviceTypeService.get_data();
+        return deviceTypes;
     }
 }
