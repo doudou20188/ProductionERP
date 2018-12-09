@@ -1,11 +1,21 @@
-package com.cskaoyan.domain.unqualify_apply;
+package com.cskaoyan.domain.employee;
 
-public class department {
+public class Department {
     private String departmentId;
 
     private String departmentName;
 
     private String note;
+
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentId='" + departmentId + '\'' +
+                ", departmentName='" + departmentName + '\'' +
+                ", note='" + note + '\'' +
+                '}';
+    }
 
     public String getDepartmentId() {
         return departmentId;

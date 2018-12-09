@@ -1,6 +1,5 @@
-package com.cskaoyan.domain.Device;
+package com.cskaoyan.domain.employee;
 
-import java.util.Date;
 
 public class Employee {
     private String empId;
@@ -27,7 +26,7 @@ public class Employee {
 
     private String educationForm;
 
-    private String departmentId;
+    private Department department;
 
     @Override
     public String toString() {
@@ -44,7 +43,7 @@ public class Employee {
                 ", major='" + major + '\'' +
                 ", graduateSchool='" + graduateSchool + '\'' +
                 ", educationForm='" + educationForm + '\'' +
-                ", departmentId='" + departmentId + '\'' +
+                ", department=" + department +
                 '}';
     }
 
@@ -138,11 +137,19 @@ public class Employee {
         this.educationForm = educationForm == null ? null : educationForm.trim();
     }
 
-    public String getDepartmentId() {
-        return departmentId;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setDepartmentId(String departmentId) {
-        this.departmentId = departmentId == null ? null : departmentId.trim();
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }
