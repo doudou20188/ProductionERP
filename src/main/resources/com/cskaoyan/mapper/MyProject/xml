@@ -1,0 +1,7 @@
+unqualify_applyMapper.xml
+com.cskaoyan.controller.unqualify
+com.cskaoyan.domain.unqualify_apply
+com.cskaoyan.mapper.unqualify_applyMapper
+com.cskaoyan.service包下面的都是
+com.cskaoyan.domain.VO包下面的都是
+在前端WEB-INF/jsp/unqualify_list.jsp 界面上修改了增删改查的条件，我把if注释掉了。

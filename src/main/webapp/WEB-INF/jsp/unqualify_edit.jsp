@@ -22,13 +22,13 @@
 	            <td>不合格项目:</td>
 	            <td>
 	            	<input class="easyui-textbox" type="text" name="unqualifyItem"/>
-    			</td>  
+    			</td>
 	        </tr>
 	        <tr>
 	            <td>不合格数量:</td>
 	            <td>
 	            	<input class="easyui-numberbox" type="text" name="unqualifyCount"/>
-    			</td>  
+    			</td>
 	        </tr>
 	        <tr>
 	            <td>加工时间:</td>
@@ -42,7 +42,7 @@
 	            <td>
 	            	<input class="easyui-combobox" name="empId" panelHeight="auto" data-options="required:true,
 	            		editable:false,valueField:'empId',textField:'empName',url:'employee/get_data'"/>
-    			</td>  
+    			</td>
 	        </tr>
 	        <tr>
 	            <td>申请时间:</td>
