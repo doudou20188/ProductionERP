@@ -5,6 +5,7 @@ import com.cskaoyan.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -39,6 +40,7 @@ public class TaskController {
         return modelAndView;
 
     }
+
     @ResponseBody
     @RequestMapping("task/list")
     public Map  ajaxFindList(String page, String rows){
@@ -208,22 +210,31 @@ public class TaskController {
     /**
      * 条件查询框
      */
+    //task/search_task_by_taskId
+    //task/search_task_by_taskWorkId
+    //task/search_task_by_taskManufactureSn
     @ResponseBody
-    @RequestMapping("task/search_task_by_taskId")
-    public Map searchTaskByID(String searchValue,String Page,String rows){//这里的searchValue怎样分别
-       /* System.out.println("taskId"+taskId);
-        System.out.println("taskWorkId"+taskWorkId);
-        System.out.println("taskManufactureSn"+taskManufactureSn);*/
+    @RequestMapping("task/{searchId}")
+    public Map searchTaskByID(@PathVariable String searchId, String searchValue, String Page, String rows){//这里的searchValue怎样分别
         HashMap hashMap = new HashMap();
-        ArrayList<Task> tasksList = new ArrayList<Task>();
-        Task task=taskService.findTaskById(searchValue);
-        tasksList.add(task);
-        hashMap.put("total",tasksList.size());
-        hashMap.put("rows",tasksList);
+        List<Task> taskList=new ArrayList();
+        if (searchId.equals("search_task_by_taskId")){
+
+            Task task =taskService.findTaskById(searchValue);
+            taskList.add(task);
+
+        }
+        if (searchId.equals("search_task_by_taskWorkId")){
+            taskList=taskService.findTaskByTaskWorkId(searchValue);
+        }
+        if (searchId.equals("search_task_by_taskManufactureSn")){
+            taskList=taskService.findTaskBytaskManufactureSn(searchValue);
+
+        }
+
+        hashMap.put("total",taskList.size());
+        hashMap.put("rows",taskList);
         return hashMap;
-
-
-
     }
 
 

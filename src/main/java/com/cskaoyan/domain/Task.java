@@ -165,4 +165,15 @@ public class Task {
     public void setWorkingHours(Long workingHours) {
         this.workingHours = workingHours;
     }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "taskId='" + taskId + '\'' +
+                ", manufactureSn='" + manufactureSn + '\'' +
+                ", workId='" + workId + '\'' +
+                ", taskQuantity=" + taskQuantity +
+                ", workingHours=" + workingHours +
+                '}';
+    }
 }

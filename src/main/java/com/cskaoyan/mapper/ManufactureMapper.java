@@ -1,6 +1,9 @@
 package com.cskaoyan.mapper;
 
 import com.cskaoyan.domain.Manufacture;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ManufactureMapper {
     /**
@@ -50,4 +53,12 @@ public interface ManufactureMapper {
      * @mbg.generated Fri Dec 07 20:44:02 CST 2018
      */
     int updateByPrimaryKey(Manufacture record);
+
+    List<Manufacture> findAllManufactureFromDB();
+
+    List<Manufacture> findManufactureByOrderIdFromDB(@Param("searchValue") String searchValue);
+
+    List<Manufacture> findManufactureByTeachnologyIdFromDB(@Param("searchValue") String technologyId);
+
+    Manufacture findManutureByTechIDFromDB(@Param("technologyId") String technologyId);
 }

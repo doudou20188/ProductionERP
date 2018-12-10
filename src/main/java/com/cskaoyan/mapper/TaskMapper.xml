@@ -37,6 +37,25 @@
     <include refid="Base_Column_List" />
     from task
   </select>
+  <select id="findTaskByTaskWorkIdFromDB" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task
+    where work_id = #{searchValue,jdbcType=VARCHAR}
+  </select>
+  <select id="findTaskBytaskManufactureSnFromDB" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task
+    where manufacture_sn = #{searchValue,jdbcType=VARCHAR}
+  </select>
+<!--
+  <select id="findAllTasksFromDB" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task
+  </select>
+-->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated

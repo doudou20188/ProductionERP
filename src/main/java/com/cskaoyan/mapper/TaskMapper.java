@@ -1,6 +1,7 @@
 package com.cskaoyan.mapper;
 
 import com.cskaoyan.domain.Task;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.ArrayList;
@@ -60,4 +61,8 @@ public interface TaskMapper {
 
     @Select("select count(*) from task")
     int findTasksCountFromDB();
+
+    List<Task> findTaskByTaskWorkIdFromDB(@Param("searchValue") String searchValue);
+
+    List<Task> findTaskBytaskManufactureSnFromDB(@Param("searchValue")String searchValue);
 }

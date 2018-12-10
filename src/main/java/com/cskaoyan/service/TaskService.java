@@ -20,4 +20,8 @@ public interface TaskService {
     boolean deleteTaskById(String ids);
 
     Task findTaskById(String searchValue);
+
+    List<Task> findTaskByTaskWorkId(String searchValue);
+
+    List<Task> findTaskBytaskManufactureSn(String searchValue);
 }

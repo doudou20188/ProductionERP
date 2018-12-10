@@ -65,4 +65,16 @@ public class TaskServiceImpl implements TaskService {
         Task task = taskMapper.selectByPrimaryKey(searchValue);
         return task;
     }
+
+    @Override
+    public List<Task> findTaskByTaskWorkId(String searchValue) {
+        List<Task> taskList=taskMapper.findTaskByTaskWorkIdFromDB(searchValue);
+        return taskList;
+    }
+
+    @Override
+    public List<Task> findTaskBytaskManufactureSn(String searchValue) {
+        List<Task> taskList=taskMapper.findTaskBytaskManufactureSnFromDB(searchValue);
+        return taskList;
+    }
 }
