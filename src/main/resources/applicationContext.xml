@@ -64,7 +64,7 @@
     </bean>
     <!--<domain class="org.mybatis.spring.mapper.MapperFactoryBean">-->
         <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>-->
-        <!--<property name="mapperInterface" value="com.cskaoyan.mapper.DeviceMapper"></property>-->
+        <!--<property name="mapperInterface" value="com.cskaoyan.mapper.yangtao.DeviceMapper"></property>-->
     <!--</domain>-->
     <tx:annotation-driven transaction-manager="txManager" ></tx:annotation-driven>
 
@@ -82,7 +82,7 @@
         <property name="dataSource" ref="datasource"/>
         <property name="mapperLocations">
             <array>
-                <value>classpath:com/cskaoyan/mapper/*.xml</value>
+                <value>classpath:com/cskaoyan/mapper/*/*.xml</value>
             </array>
         </property>
          <property name="plugins">
