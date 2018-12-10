@@ -1,10 +1,8 @@
 package com.cskaoyan.controller;
 
-import com.cskaoyan.domain.Device;
 import com.cskaoyan.domain.Process;
 import com.cskaoyan.domain.Product;
 import com.cskaoyan.domain.Work;
-import com.cskaoyan.service.DeviceService;
 import com.cskaoyan.service.ProcessService;
 import com.cskaoyan.service.ProductService;
 import com.cskaoyan.service.WorkService;
@@ -33,8 +31,6 @@ public class WorkController {
     ProductService productService;
     @Autowired
     ProcessService processService;
-    @Autowired
-    DeviceService deviceService;
 
 
     /**
@@ -64,12 +60,10 @@ public class WorkController {
             String deviceId = work.getDeviceId();
             Product product = productService.findProductById(productId);
             Process process=processService.findProcessById(processId);
-            Device device=deviceService.findDeviceById(deviceId);
             map.put("workId",work.getWorkId());
             map.put("processNumber",work.getProcessNumber());
             map.put("product",product);
             map.put("process",process);
-            map.put("device",device);
             map.put("rating",work.getRating());
             arrayList.add(map);
         }
@@ -230,12 +224,10 @@ public class WorkController {
             String deviceId = work.getDeviceId();
             Product product = productService.findProductById(productId);
             Process process = processService.findProcessById(processId);
-            Device device = deviceService.findDeviceById(deviceId);
             map.put("workId",work.getWorkId());
             map.put("processNumber",work.getProcessNumber());
             map.put("product",product);
             map.put("process",process);
-            map.put("device",device);
             map.put("rating",work.getRating());
             arrayList.add(map);
             hashMap.put("total",arrayList.size());
@@ -256,13 +248,11 @@ public class WorkController {
                     String deviceId = work.getDeviceId();
                     Product product1 = productService.findProductById(productId);
                     Process process1 = processService.findProcessById(processId);
-                    Device device1 = deviceService.findDeviceById(deviceId);
 
                     map.put("workId",work.getWorkId());
                     map.put("processNumber",work.getProcessNumber());
                     map.put("product",product1);
                     map.put("process",process1);
-                    map.put("device",device1);
                     map.put("rating",work.getRating());
                     arrayList.add(map);
                 }
@@ -273,32 +263,30 @@ public class WorkController {
 
         }
 
-        if (searchId.equals("search_work_by_workDevice")){
-            Device theDevice = deviceService.findDeviceByName(searchValue);
-            String theDeviceId = theDevice.getDeviceId();
-            List<Work> workList=workService.findWorklistByDeviceId(theDeviceId);
-            for (Work work:
-                 workList) {
-                HashMap map = new HashMap();
-                String productId = work.getProductId();
-                String processId = work.getProcessId();
-                String deviceId = work.getDeviceId();
-                Product product1 = productService.findProductById(productId);
-                Process process1 = processService.findProcessById(processId);
-                Device device1 = deviceService.findDeviceById(deviceId);
-
-                map.put("workId",work.getWorkId());
-                map.put("processNumber",work.getProcessNumber());
-                map.put("product",product1);
-                map.put("process",process1);
-                map.put("device",device1);
-                map.put("rating",work.getRating());
-                arrayList.add(map);
-            }
-            hashMap.put("total",arrayList.size());
-            hashMap.put("rows",arrayList);
-
-        }
+//        if (searchId.equals("search_work_by_workDevice")){
+//            List<Work> workList=workService.findWorklistByDeviceId(theDeviceId);
+//            for (Work work:
+//                 workList) {
+//                HashMap map = new HashMap();
+//                String productId = work.getProductId();
+//                String processId = work.getProcessId();
+//                String deviceId = work.getDeviceId();
+//                Product product1 = productService.findProductById(productId);
+//                Process process1 = processService.findProcessById(processId);
+//                //Device device1 = deviceService.findDeviceById(deviceId);
+//
+//                map.put("workId",work.getWorkId());
+//                map.put("processNumber",work.getProcessNumber());
+//                map.put("product",product1);
+//                map.put("process",process1);
+//                //map.put("device",device1);
+//                map.put("rating",work.getRating());
+//                arrayList.add(map);
+//            }
+//            hashMap.put("total",arrayList.size());
+//            hashMap.put("rows",arrayList);
+//
+//        }
 
         if (searchId.equals("search_work_by_workProcess")){
             List<Work> workList=workService.findWorkListByProcessId(searchValue);
@@ -310,13 +298,13 @@ public class WorkController {
                 String deviceId = work.getDeviceId();
                 Product product1 = productService.findProductById(productId);
                 Process process1 = processService.findProcessById(processId);
-                Device device1 = deviceService.findDeviceById(deviceId);
+                //Device device1 = deviceService.findDeviceById(deviceId);
 
                 map.put("workId",work.getWorkId());
                 map.put("processNumber",work.getProcessNumber());
                 map.put("product",product1);
                 map.put("process",process1);
-                map.put("device",device1);
+                //map.put("device",device1);
                 map.put("rating",work.getRating());
                 arrayList.add(map);
             }
