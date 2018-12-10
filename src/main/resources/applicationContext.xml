@@ -13,8 +13,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
-    <context:component-scan base-package="com.cskaoyan ,com.cskaoyan.service"></context:component-scan>
+    <context:component-scan base-package="com.cskaoyan"></context:component-scan>
     <mvc:annotation-driven ></mvc:annotation-driven>
 
     <!--<mvc:default-servlet-handler></mvc:default-servlet-handler>-->
@@ -35,7 +34,9 @@
             <value>.jsp</value>
         </property>
     </bean>
+
     <!--datasource-->
+
     <bean id="propertyConfigure"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -44,20 +45,18 @@
             </list>
         </property>
     </bean>
-    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
+  <!--  <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="url" value="${jdbc.url}" />
         <property name="username" value="${jdbc.username}" />
-        <property name="password" value="${jdbc.password}" />
+        <property name="password" value="${jdbc.password}" />-->
+
+    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="root"></property>
+        <property name="password" value="123456"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/production_ssm?serverTimezone=GMT"/>
+        <property name="filters" value="stat,wall"></property>
+
     </bean>
-    <!--原来配置项-->
-    <!--<property name="user" value="root"></property>-->
-    <!--<property name="password" value="asdzxcvb"></property>-->
-    <!--<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/erp?serverTimezone=GMT"/>-->
-    <!--<property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>-->
-
-
-
-
     <!--扫描mybatis的xml映射文件-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
@@ -65,7 +64,7 @@
     </bean>
     <!--<domain class="org.mybatis.spring.mapper.MapperFactoryBean">-->
         <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>-->
-    <!--<property name="mapperInterface" value="com.cskaoyan.mapper.device.DeviceMapper"></property>-->
+        <!--<property name="mapperInterface" value="com.cskaoyan.mapper.yangtao.DeviceMapper"></property>-->
     <!--</domain>-->
     <tx:annotation-driven transaction-manager="txManager" ></tx:annotation-driven>
 
@@ -83,7 +82,7 @@
         <property name="dataSource" ref="datasource"/>
         <property name="mapperLocations">
             <array>
-                <value>classpath:com/cskaoyan/mapper/**.xml</value>
+                <value>classpath:com/cskaoyan/mapper/*/*.xml</value>
             </array>
         </property>
          <property name="plugins">
@@ -99,7 +98,13 @@
             </array>
         </property>
     </bean>
-    <!--日志-->
+    <!--文件上传配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 最大允许上传大小5MB -->
+        <property name="maxUploadSize" value="5242880" />
+        <property name="maxInMemorySize" value="4096" />
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
 
 
 </beans>
