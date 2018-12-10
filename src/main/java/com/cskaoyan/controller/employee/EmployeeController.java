@@ -12,14 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/employee")
@@ -40,6 +38,19 @@ public class EmployeeController {
         String[] sysPermissionList = {"employee:add","employee:edit","employee:delete"};
         session.setAttribute("sysPermissionList",sysPermissionList);
         return "employee_list";
+    }
+
+    @RequestMapping("/get_data")
+    @ResponseBody
+    public List<Employee> getData(){
+        return employeeService.findAllEmployees();
+    }
+
+    @RequestMapping("/get/{empId}")
+    @ResponseBody
+    public Employee getEmployeeById(@PathVariable String empId) {
+        Employee employee= employeeService.getEmployeeById(empId);
+        return employee;
     }
 
     /**
