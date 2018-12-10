@@ -116,4 +116,18 @@ public class DeviceTypeController {
         DeviceType[] deviceTypes = deviceTypeService.get_data();
         return deviceTypes;
     }
+
+    @RequestMapping("search_deviceType_by_deviceTypeId")
+    @ResponseBody
+    public DeviceTypeListVO searchDeviceTypeByDeviceTypeId(String page, String rows, String searchValue) {
+        DeviceTypeListVO deviceTypeListVO = deviceTypeService.searchDeviceTypeByDeviceTypeId(page, rows, searchValue);
+        return deviceTypeListVO;
+    }
+
+    @RequestMapping("search_deviceType_by_deviceTypeName")
+    @ResponseBody
+    public DeviceTypeListVO searchDeviceTypeByDeviceTypeName(String page, String rows, String searchValue) {
+        DeviceTypeListVO deviceTypeListVO = deviceTypeService.searchDeviceTypeByDeviceTypeName(page, rows, searchValue);
+        return deviceTypeListVO;
+    }
 }

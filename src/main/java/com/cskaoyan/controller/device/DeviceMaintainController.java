@@ -79,8 +79,22 @@ public class DeviceMaintainController {
 
     @RequestMapping("update_note")
     @ResponseBody
-    public Status updateNote(String deviceCheckId, String deviceCheckResult) {
-        Status status = deviceMaintainService.updateNote(deviceCheckId, deviceCheckResult);
+    public Status updateNote(String deviceMaintainId, String note) {
+        Status status = deviceMaintainService.updateNote(deviceMaintainId, note);
         return status;
+    }
+
+    @RequestMapping("search_deviceMaintain_by_deviceMaintainId")
+    @ResponseBody
+    public DeviceMaintainListVO searchDeviceMaintainByDeviceMaintainId(String page, String rows, String searchValue) {
+        DeviceMaintainListVO deviceMaintainListVO = deviceMaintainService.searchDeviceMaintainByDeviceMaintainId(page, rows, searchValue);
+        return deviceMaintainListVO;
+    }
+
+    @RequestMapping("search_deviceMaintain_by_deviceFaultId")
+    @ResponseBody
+    public DeviceMaintainListVO searchDeviceMaintainByDeviceFaultId(String page, String rows, String searchValue) {
+        DeviceMaintainListVO deviceMaintainListVO = deviceMaintainService.searchDeviceMaintainByDeviceFaultId(page, rows, searchValue);
+        return deviceMaintainListVO;
     }
 }

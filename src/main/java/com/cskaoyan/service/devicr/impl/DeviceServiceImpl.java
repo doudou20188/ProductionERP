@@ -95,4 +95,40 @@ public class DeviceServiceImpl implements DeviceService {
         deviceList.toArray(devices);
         return devices;
     }
+
+    @Override
+    public DeviceListVO searchDeviceByDeviceId(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<Device> deviceList = deviceMapper.searchDeviceByDeviceId(searchValue);
+        Device[] devices = new Device[deviceList.size()];
+        deviceList.toArray(devices);
+        DeviceListVO deviceListVO = new DeviceListVO();
+        deviceListVO.setRows(devices);
+        deviceListVO.setTotal(devices.length);
+        return deviceListVO;
+    }
+
+    @Override
+    public DeviceListVO searchDeviceByDeviceName(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<Device> deviceList = deviceMapper.searchDeviceByDeviceName(searchValue);
+        Device[] devices = new Device[deviceList.size()];
+        deviceList.toArray(devices);
+        DeviceListVO deviceListVO = new DeviceListVO();
+        deviceListVO.setRows(devices);
+        deviceListVO.setTotal(devices.length);
+        return deviceListVO;
+    }
+
+    @Override
+    public DeviceListVO searchDeviceByDeviceTypeName(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<Device> deviceList = deviceMapper.searchDeviceByDeviceTypeName(searchValue);
+        Device[] devices = new Device[deviceList.size()];
+        deviceList.toArray(devices);
+        DeviceListVO deviceListVO = new DeviceListVO();
+        deviceListVO.setRows(devices);
+        deviceListVO.setTotal(devices.length);
+        return deviceListVO;
+    }
 }

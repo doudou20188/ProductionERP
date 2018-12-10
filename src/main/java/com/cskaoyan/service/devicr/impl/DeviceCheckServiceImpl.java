@@ -25,10 +25,10 @@ public class DeviceCheckServiceImpl implements DeviceCheckService {
 
     @Override
     public DeviceCheckListVO list(String page, String rows) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
         List<DeviceCheck> deviceCheckList = deviceCheckMapper.selectList();
         DeviceCheck[] devices = new DeviceCheck[deviceCheckList.size()];
         deviceCheckList.toArray(devices);
-        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
         DeviceCheckListVO deviceCheckListVO = new DeviceCheckListVO();
         deviceCheckListVO.setRows(devices);
         deviceCheckListVO.setTotal(devices.length);
@@ -81,5 +81,29 @@ public class DeviceCheckServiceImpl implements DeviceCheckService {
             status.setStatus("200");
         }
         return status;
+    }
+
+    @Override
+    public DeviceCheckListVO searchDeviceCheckByDeviceCheckId(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceCheck> deviceCheckList = deviceCheckMapper.searchDeviceCheckByDeviceCheckId(searchValue);
+        DeviceCheck[] devices = new DeviceCheck[deviceCheckList.size()];
+        deviceCheckList.toArray(devices);
+        DeviceCheckListVO deviceCheckListVO = new DeviceCheckListVO();
+        deviceCheckListVO.setRows(devices);
+        deviceCheckListVO.setTotal(devices.length);
+        return deviceCheckListVO;
+    }
+
+    @Override
+    public DeviceCheckListVO searchDeviceCheckByDeviceName(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceCheck> deviceCheckList = deviceCheckMapper.searchDeviceCheckByDeviceName(searchValue);
+        DeviceCheck[] devices = new DeviceCheck[deviceCheckList.size()];
+        deviceCheckList.toArray(devices);
+        DeviceCheckListVO deviceCheckListVO = new DeviceCheckListVO();
+        deviceCheckListVO.setRows(devices);
+        deviceCheckListVO.setTotal(devices.length);
+        return deviceCheckListVO;
     }
 }

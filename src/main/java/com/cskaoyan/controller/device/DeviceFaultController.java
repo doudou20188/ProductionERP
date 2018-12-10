@@ -89,4 +89,18 @@ public class DeviceFaultController {
     public DeviceFault[] getData() {
         return deviceFaultService.getData();
     }
+
+    @RequestMapping("search_deviceFault_by_deviceFaultId")
+    @ResponseBody
+    public DeviceFaultListVO searchDeviceFaultByDeviceFaultId(String page, String rows, String searchValue) {
+        DeviceFaultListVO deviceFaultListVO = deviceFaultService.searchDeviceFaultByDeviceFaultId(page, rows, searchValue);
+        return deviceFaultListVO;
+    }
+
+    @RequestMapping("search_deviceFault_by_deviceName")
+    @ResponseBody
+    public DeviceFaultListVO searchDeviceFaultByDeviceName(String page, String rows, String searchValue) {
+        DeviceFaultListVO deviceFaultListVO = deviceFaultService.searchDeviceFaultByDeviceName(page, rows, searchValue);
+        return deviceFaultListVO;
+    }
 }

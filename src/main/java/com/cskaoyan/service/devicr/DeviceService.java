@@ -18,4 +18,10 @@ public interface DeviceService {
     Device get(String id);
 
     Device[] getData();
+
+    DeviceListVO searchDeviceByDeviceId(String page, String rows, String searchValue);
+
+    DeviceListVO searchDeviceByDeviceName(String page, String rows, String searchValue);
+
+    DeviceListVO searchDeviceByDeviceTypeName(String page, String rows, String searchValue);
 }

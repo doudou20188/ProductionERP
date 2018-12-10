@@ -41,4 +41,12 @@
   <select id="selectByPrimaryKey" resultMap="DeviceType">
     select * from device_type where device_type_id=#{ids}
   </select>
+  <select id="searchDeviceTypeByDeviceTypeId" resultMap="DeviceType" parameterType="java.lang.String">
+    select * from device_type
+    WHERE device_type_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+  </select>
+  <select id="searchDeviceTypeByDeviceTypeName" resultMap="DeviceType" parameterType="java.lang.String">
+    select * from device_type
+    WHERE device_type_name LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+  </select>
 </mapper>

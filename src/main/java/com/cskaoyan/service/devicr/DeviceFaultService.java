@@ -16,4 +16,8 @@ public interface DeviceFaultService {
     DeviceFault get(String id);
 
     DeviceFault[] getData();
+
+    DeviceFaultListVO searchDeviceFaultByDeviceFaultId(String page, String rows, String searchValue);
+
+    DeviceFaultListVO searchDeviceFaultByDeviceName(String page, String rows, String searchValue);
 }

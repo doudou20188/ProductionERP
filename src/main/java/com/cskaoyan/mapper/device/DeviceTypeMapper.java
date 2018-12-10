@@ -14,4 +14,8 @@ public interface DeviceTypeMapper {
     public int updateDeviceType(DeviceType deviceType);
 
     DeviceType selectByPrimaryKey(String ids);
+
+    List<DeviceType> searchDeviceTypeByDeviceTypeId(String searchValue);
+
+    List<DeviceType> searchDeviceTypeByDeviceTypeName(String searchValue);
 }

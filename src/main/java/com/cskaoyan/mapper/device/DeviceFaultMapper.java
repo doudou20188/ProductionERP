@@ -14,4 +14,8 @@ public interface DeviceFaultMapper {
     int deleteByPrimaryKey(String deviceFaultId);
 
     DeviceFault get(String id);
+
+    List<DeviceFault> searchDeviceFaultByDeviceFaultId(String searchValue);
+
+    List<DeviceFault> searchDeviceFaultByDeviceName(String searchValue);
 }

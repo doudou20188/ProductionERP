@@ -82,4 +82,28 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
         deviceTypeList.toArray(deviceTypes);
         return deviceTypes;
     }
+
+    @Override
+    public DeviceTypeListVO searchDeviceTypeByDeviceTypeId(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceType> deviceTypeList = deviceTypeMapper.searchDeviceTypeByDeviceTypeId(searchValue);
+        DeviceType[] deviceTypes = new DeviceType[deviceTypeList.size()];
+        deviceTypeList.toArray(deviceTypes);
+        DeviceTypeListVO deviceTypeListVO = new DeviceTypeListVO();
+        deviceTypeListVO.setRows(deviceTypes);
+        deviceTypeListVO.setTotal(deviceTypeList.size());
+        return deviceTypeListVO;
+    }
+
+    @Override
+    public DeviceTypeListVO searchDeviceTypeByDeviceTypeName(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceType> deviceTypeList = deviceTypeMapper.searchDeviceTypeByDeviceTypeName(searchValue);
+        DeviceType[] deviceTypes = new DeviceType[deviceTypeList.size()];
+        deviceTypeList.toArray(deviceTypes);
+        DeviceTypeListVO deviceTypeListVO = new DeviceTypeListVO();
+        deviceTypeListVO.setRows(deviceTypes);
+        deviceTypeListVO.setTotal(deviceTypeList.size());
+        return deviceTypeListVO;
+    }
 }

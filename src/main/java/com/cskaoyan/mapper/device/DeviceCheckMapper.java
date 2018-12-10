@@ -14,4 +14,8 @@ public interface DeviceCheckMapper {
     int deleteByPrimaryKey(String deviceId);
 
     int updateNote(String deviceCheckId, String note);
+
+    List<DeviceCheck> searchDeviceCheckByDeviceCheckId(String searchValue);
+
+    List<DeviceCheck> searchDeviceCheckByDeviceName(String searchValue);
 }

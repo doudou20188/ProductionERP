@@ -11,19 +11,19 @@
         <result column="note" jdbcType="VARCHAR" property="note"/>
         <result column="device_maintain_emp" jdbcType="VARCHAR" property="deviceMaintainEmp"/>
     </resultMap>
-    <select id="selectList" parameterType="com.cskaoyan.domain.device.DeviceMaintain" resultMap="BaseResultMap">
-    SELECT
-    device_maintain.device_maintain_id,
-    device_maintain.device_fault_id,
-    device_maintain.device_maintain_emp_id,
-    device_maintain.device_maintain_date,
-    device_maintain.device_maintain_result,
-    device_maintain.device_maintain_cost,
-    device_maintain.note,
-    employee.emp_name AS device_maintain_emp
-    FROM
-    device_maintain ,
-    employee
+    <select id="selectList" resultMap="BaseResultMap">
+     SELECT
+device_maintain.device_maintain_id,
+device_maintain.device_fault_id,
+device_maintain.device_maintain_emp_id,
+device_maintain.device_maintain_date,
+device_maintain.device_maintain_result,
+device_maintain.device_maintain_cost,
+device_maintain.note,
+employee.emp_name AS device_maintain_emp
+FROM
+device_maintain
+INNER JOIN employee ON device_maintain.device_maintain_emp_id = employee.emp_id
 </select>
     <insert id="insertDeviceMaintain" parameterType="com.cskaoyan.domain.device.DeviceMaintain">
     insert into device_maintain (device_maintain_id, device_fault_id,
@@ -53,4 +53,34 @@
     update device_maintain set note = #{param2,jdbcType=VARCHAR}
     where device_maintain_id = #{param1,jdbcType=VARCHAR}
     </update>
+    <select id="searchDeviceMaintainByDeviceMaintainId" resultMap="BaseResultMap" parameterType="java.lang.String">
+     SELECT
+device_maintain.device_maintain_id,
+device_maintain.device_fault_id,
+device_maintain.device_maintain_emp_id,
+device_maintain.device_maintain_date,
+device_maintain.device_maintain_result,
+device_maintain.device_maintain_cost,
+device_maintain.note,
+employee.emp_name AS device_maintain_emp
+FROM
+device_maintain
+INNER JOIN employee ON device_maintain.device_maintain_emp_id = employee.emp_id
+WHERE device_maintain_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+</select>
+    <select id="searchDeviceMaintainByDeviceFaultId" resultMap="BaseResultMap" parameterType="java.lang.String">
+     SELECT
+device_maintain.device_maintain_id,
+device_maintain.device_fault_id,
+device_maintain.device_maintain_emp_id,
+device_maintain.device_maintain_date,
+device_maintain.device_maintain_result,
+device_maintain.device_maintain_cost,
+device_maintain.note,
+employee.emp_name AS device_maintain_emp
+FROM
+device_maintain
+INNER JOIN employee ON device_maintain.device_maintain_emp_id = employee.emp_id
+WHERE device_fault_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+</select>
 </mapper>

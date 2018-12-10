@@ -14,4 +14,8 @@ public interface DeviceCheckService {
     Status deleteByPrimaryKey(String ids);
 
     Status updateNote(String deviceId, String note);
+
+    DeviceCheckListVO searchDeviceCheckByDeviceCheckId(String page, String rows, String searchValue);
+
+    DeviceCheckListVO searchDeviceCheckByDeviceName(String page, String rows, String searchValue);
 }

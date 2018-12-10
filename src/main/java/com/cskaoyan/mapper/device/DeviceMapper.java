@@ -16,4 +16,10 @@ public interface DeviceMapper {
     int updateNote(String deviceId, String note);
 
     Device get(String id);
+
+    List<Device> searchDeviceByDeviceId(String searchValue);
+
+    List<Device> searchDeviceByDeviceName(String searchValue);
+
+    List<Device> searchDeviceByDeviceTypeName(String searchValue);
 }

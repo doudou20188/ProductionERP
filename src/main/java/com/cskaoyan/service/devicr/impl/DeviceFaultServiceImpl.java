@@ -82,4 +82,28 @@ public class DeviceFaultServiceImpl implements DeviceFaultService {
         deviceList.toArray(deviceFaults);
         return deviceFaults;
     }
+
+    @Override
+    public DeviceFaultListVO searchDeviceFaultByDeviceFaultId(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceFault> deviceList = deviceFaultMapper.searchDeviceFaultByDeviceFaultId(searchValue);
+        DeviceFault[] deviceFaults = new DeviceFault[deviceList.size()];
+        deviceList.toArray(deviceFaults);
+        DeviceFaultListVO deviceFaultListVO = new DeviceFaultListVO();
+        deviceFaultListVO.setRows(deviceFaults);
+        deviceFaultListVO.setTotal(deviceFaults.length);
+        return deviceFaultListVO;
+    }
+
+    @Override
+    public DeviceFaultListVO searchDeviceFaultByDeviceName(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceFault> deviceList = deviceFaultMapper.searchDeviceFaultByDeviceName(searchValue);
+        DeviceFault[] deviceFaults = new DeviceFault[deviceList.size()];
+        deviceList.toArray(deviceFaults);
+        DeviceFaultListVO deviceFaultListVO = new DeviceFaultListVO();
+        deviceFaultListVO.setRows(deviceFaults);
+        deviceFaultListVO.setTotal(deviceFaults.length);
+        return deviceFaultListVO;
+    }
 }

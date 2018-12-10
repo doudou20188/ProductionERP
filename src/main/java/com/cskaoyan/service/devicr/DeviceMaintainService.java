@@ -13,5 +13,9 @@ public interface DeviceMaintainService {
 
     Status deleteByPrimaryKey(String ids);
 
-    Status updateNote(String deviceCheckId, String deviceCheckResult);
+    Status updateNote(String deviceMaintainId, String note);
+
+    DeviceMaintainListVO searchDeviceMaintainByDeviceMaintainId(String page, String rows, String searchValue);
+
+    DeviceMaintainListVO searchDeviceMaintainByDeviceFaultId(String page, String rows, String searchValue);
 }

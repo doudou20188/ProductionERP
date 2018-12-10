@@ -58,4 +58,32 @@
     INNER JOIN device ON device_fault.device_id = device.device_id
     WHERE device_fault_id = #{deviceFaultId,jdbcType=VARCHAR}
   </select>
+    <select id="searchDeviceFaultByDeviceFaultId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+    device_fault.device_fault_id,
+    device_fault.device_id,
+    device_fault.device_fault_cause,
+    device_fault.device_fault_detail,
+    device_fault.device_fault_date,
+    device_fault.device_fault_maintenance,
+    device.device_name
+    FROM
+    device_fault
+    INNER JOIN device ON device_fault.device_id = device.device_id
+    WHERE device_fault_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+  </select>
+    <select id="searchDeviceFaultByDeviceName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+    device_fault.device_fault_id,
+    device_fault.device_id,
+    device_fault.device_fault_cause,
+    device_fault.device_fault_detail,
+    device_fault.device_fault_date,
+    device_fault.device_fault_maintenance,
+    device.device_name
+    FROM
+    device_fault
+    INNER JOIN device ON device_fault.device_id = device.device_id
+    WHERE device_name LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+  </select>
 </mapper>

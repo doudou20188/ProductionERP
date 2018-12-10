@@ -51,4 +51,36 @@ INNER JOIN device ON device_check.device_id = device.device_id
     update device_check set device_check_result = #{param2,jdbcType=VARCHAR}
     where device_check_id = #{param1,jdbcType=VARCHAR}
     </update>
+    <select id="searchDeviceCheckByDeviceCheckId" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+device_check.device_check_id,
+device_check.device_id,
+device_check.device_check_emp_id,
+device_check.device_check_date,
+device_check.device_check_result,
+device_check.device_check_fault_id,
+employee.emp_name AS device_check_emp,
+device.device_name
+FROM
+device_check
+INNER JOIN employee ON device_check.device_check_emp_id = employee.emp_id
+INNER JOIN device ON device_check.device_id = device.device_id
+WHERE device_check_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+    </select>
+    <select id="searchDeviceCheckByDeviceName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+device_check.device_check_id,
+device_check.device_id,
+device_check.device_check_emp_id,
+device_check.device_check_date,
+device_check.device_check_result,
+device_check.device_check_fault_id,
+employee.emp_name AS device_check_emp,
+device.device_name
+FROM
+device_check
+INNER JOIN employee ON device_check.device_check_emp_id = employee.emp_id
+INNER JOIN device ON device_check.device_id = device.device_id
+WHERE device_name LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+    </select>
 </mapper>

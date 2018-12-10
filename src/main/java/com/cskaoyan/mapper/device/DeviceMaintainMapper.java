@@ -15,4 +15,8 @@ public interface DeviceMaintainMapper {
     int deleteByPrimaryKey(String deviceId);
 
     int updateNote(String deviceMaintainId, String deviceMaintainResult);
+
+    List<DeviceMaintain> searchDeviceMaintainByDeviceMaintainId(String searchValue);
+
+    List<DeviceMaintain> searchDeviceMaintainByDeviceFaultId(String searchValue);
 }

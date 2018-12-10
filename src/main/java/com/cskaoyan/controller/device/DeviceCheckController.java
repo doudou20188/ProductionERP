@@ -82,4 +82,16 @@ public class DeviceCheckController {
         Status status = deviceCheckService.updateNote(deviceCheckId, deviceCheckResult);
         return status;
     }
+
+    @RequestMapping("search_deviceCheck_by_deviceCheckId")
+    @ResponseBody
+    public DeviceCheckListVO searchDeviceCheckByDeviceCheckId(String page, String rows, String searchValue) {
+        return deviceCheckService.searchDeviceCheckByDeviceCheckId(page, rows, searchValue);
+    }
+
+    @RequestMapping("search_deviceCheck_by_deviceName")
+    @ResponseBody
+    public DeviceCheckListVO searchDeviceCheckByDeviceName(String page, String rows, String searchValue) {
+        return deviceCheckService.searchDeviceCheckByDeviceName(page, rows, searchValue);
+    }
 }

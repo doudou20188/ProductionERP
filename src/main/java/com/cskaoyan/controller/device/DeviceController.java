@@ -171,4 +171,25 @@ public class DeviceController {
     public Device[] getData() {
         return deviceService.getData();
     }
+
+    @RequestMapping("deviceList/search_device_by_deviceId")
+    @ResponseBody
+    public DeviceListVO searchDeviceByDeviceId(String page, String rows, String searchValue) {
+        DeviceListVO deviceListVO = deviceService.searchDeviceByDeviceId(page, rows, searchValue);
+        return deviceListVO;
+    }
+
+    @RequestMapping("deviceList/search_device_by_deviceName")
+    @ResponseBody
+    public DeviceListVO searchDeviceByDeviceName(String page, String rows, String searchValue) {
+        DeviceListVO deviceListVO = deviceService.searchDeviceByDeviceName(page, rows, searchValue);
+        return deviceListVO;
+    }
+
+    @RequestMapping("deviceList/search_device_by_deviceTypeName")
+    @ResponseBody
+    public DeviceListVO searchDeviceByDeviceTypeName(String page, String rows, String searchValue) {
+        DeviceListVO deviceListVO = deviceService.searchDeviceByDeviceTypeName(page, rows, searchValue);
+        return deviceListVO;
+    }
 }

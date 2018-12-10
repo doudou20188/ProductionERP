@@ -17,4 +17,8 @@ public interface DeviceTypeService {
     DeviceType selectByPrimaryKey(String ids);
 
     DeviceType[] get_data();
+
+    DeviceTypeListVO searchDeviceTypeByDeviceTypeId(String page, String rows, String searchValue);
+
+    DeviceTypeListVO searchDeviceTypeByDeviceTypeName(String page, String rows, String searchValue);
 }

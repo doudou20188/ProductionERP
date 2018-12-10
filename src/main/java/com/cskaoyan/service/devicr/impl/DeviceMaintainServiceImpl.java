@@ -71,8 +71,8 @@ public class DeviceMaintainServiceImpl implements DeviceMaintainService {
     }
 
     @Override
-    public Status updateNote(String deviceMaintainId, String deviceMaintainResult) {
-        int b = deviceMaintainMapper.updateNote(deviceMaintainId, deviceMaintainResult);
+    public Status updateNote(String deviceMaintainId, String note) {
+        int b = deviceMaintainMapper.updateNote(deviceMaintainId, note);
         Status status = new Status();
         if (b > 0) {
             status.setMsg("OK");
@@ -80,5 +80,29 @@ public class DeviceMaintainServiceImpl implements DeviceMaintainService {
             status.setStatus("200");
         }
         return status;
+    }
+
+    @Override
+    public DeviceMaintainListVO searchDeviceMaintainByDeviceMaintainId(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceMaintain> deviceMaintainList = deviceMaintainMapper.searchDeviceMaintainByDeviceMaintainId(searchValue);
+        DeviceMaintain[] deviceMaintains = new DeviceMaintain[deviceMaintainList.size()];
+        deviceMaintainList.toArray(deviceMaintains);
+        DeviceMaintainListVO deviceMaintainListVO = new DeviceMaintainListVO();
+        deviceMaintainListVO.setRows(deviceMaintains);
+        deviceMaintainListVO.setTotal(deviceMaintains.length);
+        return deviceMaintainListVO;
+    }
+
+    @Override
+    public DeviceMaintainListVO searchDeviceMaintainByDeviceFaultId(String page, String rows, String searchValue) {
+        PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
+        List<DeviceMaintain> deviceMaintainList = deviceMaintainMapper.searchDeviceMaintainByDeviceFaultId(searchValue);
+        DeviceMaintain[] deviceMaintains = new DeviceMaintain[deviceMaintainList.size()];
+        deviceMaintainList.toArray(deviceMaintains);
+        DeviceMaintainListVO deviceMaintainListVO = new DeviceMaintainListVO();
+        deviceMaintainListVO.setRows(deviceMaintains);
+        deviceMaintainListVO.setTotal(deviceMaintains.length);
+        return deviceMaintainListVO;
     }
 }
