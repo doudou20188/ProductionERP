@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 
-    <context:component-scan base-package="com.cskaoyan ,com.cskaoyan.service.devicr"></context:component-scan>
+    <context:component-scan base-package="com.cskaoyan ,com.cskaoyan.service"></context:component-scan>
     <mvc:annotation-driven ></mvc:annotation-driven>
 
     <!--<mvc:default-servlet-handler></mvc:default-servlet-handler>-->

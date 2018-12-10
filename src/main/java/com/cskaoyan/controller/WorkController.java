@@ -122,32 +122,6 @@ public class WorkController {
     }
 
     @ResponseBody
-    @RequestMapping("/deviceList/get_data")
-    public List deviceListGetData(){
-        //不重复处理
-        List<Device> deviceList=deviceService.findAllDevices();
-        ArrayList arrayList = new ArrayList();
-        for (Device device:
-                deviceList) {
-            HashMap hashMap = new HashMap();
-            hashMap.put("deviceId",device.getDeviceId());
-            hashMap.put("deviceName",device.getDeviceName());
-            hashMap.put("deviceTypeId",device.getDeviceTypeId());
-            hashMap.put("deviceStatusId",device.getDeviceStatusId());
-            hashMap.put("deviceStatus",device.getDeviceStatus());
-            hashMap.put("devicePurchaseDate",device.getDevicePurchaseDate());
-            hashMap.put("devicePurchasePrice",device.getDevicePurchasePrice());
-            hashMap.put("deviceManufactureDate",device.getDeviceManufactureDate());
-            hashMap.put("deviceServiceLife",device.getDeviceServiceLife());
-            hashMap.put("deviceKeeperId",device.getDeviceKeeperId());
-            hashMap.put("note",device.getNote());
-
-            arrayList.add(hashMap);
-        }
-        return arrayList;
-
-    }
-    @ResponseBody
     @RequestMapping("work/insert")
     public Map workInsert(Work work){
         HashMap map = new HashMap();

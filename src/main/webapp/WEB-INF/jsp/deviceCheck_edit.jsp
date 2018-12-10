@@ -57,7 +57,7 @@
 	});
 	
 	function submitDeviceCheckEditForm(){
-		$.get("deviceCheck/edit_judge",'',function(data){
+        $.get("DeviceCheck/edit_judge", '', function (data) {
     		if(data.msg != null){
     			$.messager.alert('提示', data.msg);
     		}else{
@@ -67,11 +67,11 @@
     			}
     			//同步文本框中的备注
     			deviceCheckEditEditor.sync();
-    			$.post("deviceCheck/update",$("#deviceCheckEditForm").serialize(), function(data){
+                $.post("DeviceCheck/update", $("#deviceCheckEditForm").serialize(), function (data) {
     				if(data.status == 200){
     					$.messager.alert('提示','修改设备例检成功!','info',function(){
     						$("#deviceCheckEditWindow").window('close');
-    						$("#deviceCheck").datagrid("reload");
+                            $("#DeviceCheck").datagrid("reload");
     					});
     				}else{
     					$.messager.alert('提示', data.msg);
