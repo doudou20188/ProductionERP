@@ -2,10 +2,10 @@ package com.cskaoyan.service.devicr;
 
 import com.cskaoyan.domain.device.DeviceCheck;
 import com.cskaoyan.domain.device.Status;
-import com.cskaoyan.domain.device.vo.DeviceCheckVO;
+import com.cskaoyan.domain.device.vo.DeviceCheckListVO;
 
 public interface DeviceCheckService {
-    DeviceCheckVO list(String page, String rows);
+    DeviceCheckListVO list(String page, String rows);
 
     Status insert(DeviceCheck device);
 

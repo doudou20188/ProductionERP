@@ -1,16 +1,16 @@
 package com.cskaoyan.domain.device.vo;
 
-import com.cskaoyan.domain.device.DeviceCheck;
+import com.cskaoyan.domain.device.DeviceMaintain;
 
 /**
  * Demo class
  *
  * @Author lyboy
- * @Date 2018/12/8 17:17
+ * @Date 2018/12/9 13:30
  **/
-public class DeviceCheckVO {
+public class DeviceMaintainListVO {
     int total;
-    DeviceCheck[] rows;
+    DeviceMaintain[] rows;
 
     public int getTotal() {
         return total;
@@ -20,11 +20,11 @@ public class DeviceCheckVO {
         this.total = total;
     }
 
-    public DeviceCheck[] getRows() {
+    public DeviceMaintain[] getRows() {
         return rows;
     }
 
-    public void setRows(DeviceCheck[] rows) {
+    public void setRows(DeviceMaintain[] rows) {
         this.rows = rows;
     }
 }

@@ -2,7 +2,7 @@ package com.cskaoyan.service.devicr.impl;
 
 import com.cskaoyan.domain.device.DeviceCheck;
 import com.cskaoyan.domain.device.Status;
-import com.cskaoyan.domain.device.vo.DeviceCheckVO;
+import com.cskaoyan.domain.device.vo.DeviceCheckListVO;
 import com.cskaoyan.mapper.device.DeviceCheckMapper;
 import com.cskaoyan.service.devicr.DeviceCheckService;
 import com.github.pagehelper.PageHelper;
@@ -24,15 +24,15 @@ public class DeviceCheckServiceImpl implements DeviceCheckService {
     DeviceCheckMapper deviceCheckMapper;
 
     @Override
-    public DeviceCheckVO list(String page, String rows) {
+    public DeviceCheckListVO list(String page, String rows) {
         List<DeviceCheck> deviceCheckList = deviceCheckMapper.selectList();
         DeviceCheck[] devices = new DeviceCheck[deviceCheckList.size()];
         deviceCheckList.toArray(devices);
         PageHelper.startPage(Integer.valueOf(page), Integer.valueOf(rows));
-        DeviceCheckVO deviceCheckVO = new DeviceCheckVO();
-        deviceCheckVO.setRows(devices);
-        deviceCheckVO.setTotal(devices.length);
-        return deviceCheckVO;
+        DeviceCheckListVO deviceCheckListVO = new DeviceCheckListVO();
+        deviceCheckListVO.setRows(devices);
+        deviceCheckListVO.setTotal(devices.length);
+        return deviceCheckListVO;
     }
 
     @Override

@@ -35,6 +35,31 @@ public class DeviceController {
      * 设备种类转发jsp组件的控制器
      * 黑洞
      */
+    @RequestMapping("device/deviceMaintain")
+    public String deviceMaintain(HttpSession session) {
+        User activeuser = (User) session.getAttribute("activeUser");
+        if (activeuser.getLocked().equals("1")) {
+            List<String> sysPermissionList = new ArrayList<>();
+            sysPermissionList.add("deviceMaintain:add");
+            sysPermissionList.add("deviceMaintain:edit");
+            sysPermissionList.add("deviceMaintain:delete");
+            session.setAttribute("sysPermissionList", sysPermissionList);
+        }
+        return "deviceMaintain";
+    }
+
+    @RequestMapping("device/deviceFault")
+    public String deviceFault(HttpSession session) {
+        User activeuser = (User) session.getAttribute("activeUser");
+        if (activeuser.getLocked().equals("1")) {
+            List<String> sysPermissionList = new ArrayList<>();
+            sysPermissionList.add("deviceFault:add");
+            sysPermissionList.add("deviceFault:edit");
+            sysPermissionList.add("deviceFault:delete");
+            session.setAttribute("sysPermissionList", sysPermissionList);
+        }
+        return "deviceFault";
+    }
     @RequestMapping("device/deviceType")
     public String deviceType(HttpSession session){
         User activeuser = (User) session.getAttribute("activeUser");

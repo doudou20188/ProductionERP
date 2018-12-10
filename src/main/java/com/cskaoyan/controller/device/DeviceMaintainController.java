@@ -1,9 +1,9 @@
 package com.cskaoyan.controller.device;
 
-import com.cskaoyan.domain.device.DeviceCheck;
+import com.cskaoyan.domain.device.DeviceMaintain;
 import com.cskaoyan.domain.device.Status;
-import com.cskaoyan.domain.device.vo.DeviceCheckListVO;
-import com.cskaoyan.service.devicr.DeviceCheckService;
+import com.cskaoyan.domain.device.vo.DeviceMaintainListVO;
+import com.cskaoyan.service.devicr.DeviceMaintainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,18 +13,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Demo class
  *
  * @Author lyboy
- * @Date 2018/12/8 17:14
+ * @Date 2018/12/9 13:29
  **/
 @Controller
-@RequestMapping(value = {"DeviceCheck", "deviceCheck"})
-public class DeviceCheckController {
+@RequestMapping("deviceMaintain")
+public class DeviceMaintainController {
     @Autowired
-    DeviceCheckService deviceCheckService;
+    DeviceMaintainService deviceMaintainService;
 
-    @RequestMapping("/list")
+    @RequestMapping("list")
     @ResponseBody
-    public DeviceCheckListVO list(String page, String rows) {
-        return deviceCheckService.list(page, rows);
+    public DeviceMaintainListVO list(String page, String rows) {
+        DeviceMaintainListVO deviceMaintainListVO = deviceMaintainService.selectList(page, rows);
+        return deviceMaintainListVO;
     }
 
     @RequestMapping("add_judge")
@@ -35,13 +36,13 @@ public class DeviceCheckController {
 
     @RequestMapping("add")
     public String add() {
-        return "deviceCheck_add";
+        return "deviceMaintain_add";
     }
 
-    @RequestMapping("/insert")
+    @RequestMapping("insert")
     @ResponseBody
-    public Status insert(DeviceCheck deviceCheck) {
-        Status status = deviceCheckService.insert(deviceCheck);
+    public Status insert(DeviceMaintain deviceMaintain) {
+        Status status = deviceMaintainService.insert(deviceMaintain);
         return status;
     }
 
@@ -53,13 +54,13 @@ public class DeviceCheckController {
 
     @RequestMapping("edit")
     public String edit() {
-        return "deviceCheck_edit";
+        return "deviceMaintain_edit";
     }
 
     @RequestMapping("update")
     @ResponseBody
-    public Status update(DeviceCheck deviceCheck) {
-        Status status = deviceCheckService.update(deviceCheck);
+    public Status update(DeviceMaintain deviceMaintain) {
+        Status status = deviceMaintainService.update(deviceMaintain);
         return status;
     }
 
@@ -72,14 +73,14 @@ public class DeviceCheckController {
     @RequestMapping("delete_batch")
     @ResponseBody
     public Status delete_batch(String ids) {
-        Status status = deviceCheckService.deleteByPrimaryKey(ids);
+        Status status = deviceMaintainService.deleteByPrimaryKey(ids);
         return status;
     }
 
     @RequestMapping("update_note")
     @ResponseBody
     public Status updateNote(String deviceCheckId, String deviceCheckResult) {
-        Status status = deviceCheckService.updateNote(deviceCheckId, deviceCheckResult);
+        Status status = deviceMaintainService.updateNote(deviceCheckId, deviceCheckResult);
         return status;
     }
 }
