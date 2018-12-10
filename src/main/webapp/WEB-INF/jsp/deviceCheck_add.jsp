@@ -77,12 +77,12 @@
 		//ajax的post方式提交表单
 		//$("#deviceCheckAddEmp").serialize()将表单序列号为key-value形式的字符串
 		console.log($("#deviceCheckAddEmp").serialize());
-		$.post("deviceCheck/insert",$("#deviceCheckAddEmp").serialize(), function(data){
+        $.post("DeviceCheck/insert", $("#deviceCheckAddEmp").serialize(), function (data) {
 			if(data.status == 200){
 				$.messager.alert('提示','新增设备例检信息成功!');
 				clearForm_deviceCheck();
 				$("#deviceCheckAddWindow").window("close");
-				$("#deviceCheck").datagrid("reload");
+                $("#DeviceCheck").datagrid("reload");
 			}else{
 				$.messager.alert('提示',data.msg);
 			}

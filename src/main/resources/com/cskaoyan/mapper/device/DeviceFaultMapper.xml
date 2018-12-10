@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mapper.device.DeviceFaultMapper">
+    <resultMap id="BaseResultMap" type="com.cskaoyan.domain.device.DeviceFault">
+        <id column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId"/>
+        <result column="device_id" jdbcType="VARCHAR" property="deviceId"/>
+        <result column="device_fault_cause" jdbcType="VARCHAR" property="deviceFaultCause"/>
+        <result column="device_fault_detail" jdbcType="VARCHAR" property="deviceFaultDetail"/>
+        <result column="device_fault_date" jdbcType="TIMESTAMP" property="deviceFaultDate"/>
+        <result column="device_fault_maintenance" jdbcType="VARCHAR" property="deviceFaultMaintenance"/>
+        <result column="device_name" jdbcType="VARCHAR" property="deviceName"/>
+    </resultMap>
+    <select id="selectList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+    device_fault.device_fault_id,
+    device_fault.device_id,
+    device_fault.device_fault_cause,
+    device_fault.device_fault_detail,
+    device_fault.device_fault_date,
+    device_fault.device_fault_maintenance,
+    device.device_name
+    FROM
+    device_fault
+    INNER JOIN device ON device_fault.device_id = device.device_id
+  </select>
+    <insert id="insertDeviceFault" parameterType="com.cskaoyan.domain.device.DeviceFault">
+    insert into device_fault (device_fault_id, device_id, device_fault_cause,
+      device_fault_detail, device_fault_date, device_fault_maintenance
+      )
+    values (#{deviceFaultId,jdbcType=VARCHAR}, #{deviceId,jdbcType=VARCHAR}, #{deviceFaultCause,jdbcType=VARCHAR},
+      #{deviceFaultDetail,jdbcType=VARCHAR}, #{deviceFaultDate,jdbcType=TIMESTAMP}, #{deviceFaultMaintenance,jdbcType=VARCHAR}
+      )
+  </insert>
+    <update id="updateDevice" parameterType="com.cskaoyan.domain.device.DeviceFault">
+    update device_fault
+    set device_id = #{deviceId,jdbcType=VARCHAR},
+      device_fault_cause = #{deviceFaultCause,jdbcType=VARCHAR},
+      device_fault_detail = #{deviceFaultDetail,jdbcType=VARCHAR},
+      device_fault_date = #{deviceFaultDate,jdbcType=TIMESTAMP},
+      device_fault_maintenance = #{deviceFaultMaintenance,jdbcType=VARCHAR}
+    where device_fault_id = #{deviceFaultId,jdbcType=VARCHAR}
+  </update>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from device_fault
+    where device_fault_id = #{deviceFaultId,jdbcType=VARCHAR}
+  </delete>
+    <select id="get" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+    device_fault.device_fault_id,
+    device_fault.device_id,
+    device_fault.device_fault_cause,
+    device_fault.device_fault_detail,
+    device_fault.device_fault_date,
+    device_fault.device_fault_maintenance,
+    device.device_name
+    FROM
+    device_fault
+    INNER JOIN device ON device_fault.device_id = device.device_id
+    WHERE device_fault_id = #{deviceFaultId,jdbcType=VARCHAR}
+  </select>
+</mapper>
