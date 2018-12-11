@@ -1044,12 +1044,12 @@ public class unqualify {
         return "p_measure_check_add";
     }
 
-    @RequestMapping("technologyPlan/get_data")
+    /*@RequestMapping("technologyPlan/get_data")
     @ResponseBody
     public List<technology_plan> technologyPlan_get_data() {
         List<technology_plan> technologies = unqualifyService.selectAllTechnologyPlan();
         return technologies;
-    }
+    }*/
 
     @RequestMapping("p_measure_check/insert")
     @ResponseBody

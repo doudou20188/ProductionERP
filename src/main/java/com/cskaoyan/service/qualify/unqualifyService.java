@@ -62,7 +62,7 @@ public interface unqualifyService {
 
     int insertProcess_measure_checkByProcess_measure(process_measure_check process_measure_check);
 
-    List<technology_plan> selectAllTechnologyPlan();
+
 
     int updateProcess_measure_checkByProcess_measure(process_measure_check process_measure_check);
 

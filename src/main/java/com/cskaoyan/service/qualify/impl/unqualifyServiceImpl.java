@@ -135,10 +135,6 @@ public class unqualifyServiceImpl implements unqualifyService {
         return unqualify_applyMapper.insertProcess_measure_checkByProcess_measure(process_measure_check ) ;
     }
 
-    @Override
-    public List<technology_plan> selectAllTechnologyPlan() {
-        return unqualify_applyMapper.selectAllTechnologyPlan();
-    }
 
     @Override
     public int updateProcess_measure_checkByProcess_measure(process_measure_check process_measure_check) {
