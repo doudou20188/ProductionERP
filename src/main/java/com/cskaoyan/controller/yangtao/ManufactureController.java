@@ -1,6 +1,8 @@
 package com.cskaoyan.controller.yangtao;
 
+import com.cskaoyan.domain.technology.Technology;
 import com.cskaoyan.domain.yangtao.*;
+import com.cskaoyan.service.technology.TechnologyService;
 import com.cskaoyan.service.yangtao.*;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

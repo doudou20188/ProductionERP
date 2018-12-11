@@ -2,11 +2,12 @@ package com.cskaoyan.controller.yangtao;
 
 
 
+import com.cskaoyan.domain.technology.Processes;
 import com.cskaoyan.domain.yangtao.Process;
 import com.cskaoyan.domain.yangtao.Product;
 import com.cskaoyan.domain.yangtao.Work;
 import com.cskaoyan.service.devicr.DeviceService;
-import com.cskaoyan.service.yangtao.ProcessService;
+import com.cskaoyan.service.technology.ProcessService;
 import com.cskaoyan.service.yangtao.ProductService;
 import com.cskaoyan.service.yangtao.WorkService;
 import com.github.pagehelper.PageHelper;
@@ -66,7 +67,7 @@ public class WorkController {
             String processId = work.getProcessId();
             String deviceId = work.getDeviceId();
             Product product = productService.findProductById(productId);
-            Process process=processService.findProcessById(processId);
+            Processes process=processService.findProcessById(processId);
             com.cskaoyan.domain.device.Device device=deviceService.get(deviceId);
             map.put("workId",work.getWorkId());
             map.put("processNumber",work.getProcessNumber());
@@ -209,7 +210,7 @@ public class WorkController {
             String processId = work.getProcessId();
             String deviceId = work.getDeviceId();
             Product product = productService.findProductById(productId);
-            Process process = processService.findProcessById(processId);
+            Processes process = processService.findProcessById(processId);
             com.cskaoyan.domain.device.Device device = deviceService.get(deviceId);
             map.put("workId",work.getWorkId());
             map.put("processNumber",work.getProcessNumber());
@@ -235,7 +236,7 @@ public class WorkController {
                     String processId = work.getProcessId();
                     String deviceId = work.getDeviceId();
                     Product product1 = productService.findProductById(productId);
-                    Process process1 = processService.findProcessById(processId);
+                    Processes process1 = processService.findProcessById(processId);
                     com.cskaoyan.domain.device.Device device1 = deviceService.get(deviceId);
 
                     map.put("workId",work.getWorkId());
@@ -264,7 +265,7 @@ public class WorkController {
                 String processId = work.getProcessId();
                 String deviceId = work.getDeviceId();
                 Product product1 = productService.findProductById(productId);
-                Process process1 = processService.findProcessById(processId);
+                Processes process1 = processService.findProcessById(processId);
                 com.cskaoyan.domain.device.Device device1 = deviceService.get(deviceId);
 
                 map.put("workId",work.getWorkId());
@@ -289,7 +290,7 @@ public class WorkController {
                 String processId = work.getProcessId();
                 String deviceId = work.getDeviceId();
                 Product product1 = productService.findProductById(productId);
-                Process process1 = processService.findProcessById(processId);
+                Processes process1 = processService.findProcessById(processId);
                 com.cskaoyan.domain.device.Device device1 = deviceService.get(deviceId);
 
                 map.put("workId",work.getWorkId());
