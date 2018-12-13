@@ -24,17 +24,17 @@
 <div  id="toolbar_material" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
 	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
-		<c:if test="${per=='material:add' }" >
+		<c:if test="${per=='Material:add' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="material_add()">新增</a>  
 		    </div>  
 		</c:if>
-		<c:if test="${per=='material:edit' }" >
+		<c:if test="${per=='Material:edit' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="material_edit()">编辑</a>  
 		    </div>  
 		</c:if>
-		<c:if test="${per=='material:delete' }" >
+		<c:if test="${per=='Material:delete' }" >
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="material_delete()">
 					删除
@@ -91,7 +91,7 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
 	if(value == null || value == ''){
 		$("#materialList").datagrid({
 	        title:'物料信息', singleSelect:false, collapsible:true, pagination:true, rownumbers:true, method:'get',
-			nowrap:true, toolbar:"toolbar_material", url:'material/list', method:'get', loadMsg:'数据加载中......',
+			nowrap:true, toolbar:"toolbar_material", url:'Material/list', method:'get', loadMsg:'数据加载中......',
 			fitColumns:true,//允许表格自动缩放,以适应父容器
 	        columns : [ [ 	       
 				{field : 'ck', checkbox:true },
@@ -105,7 +105,7 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
 	}else{
 		$("#materialList").datagrid({  
 	        title:'物料信息', singleSelect:false, collapsible:true, pagination:true, rownumbers:true, method:'get',
-			nowrap:true, toolbar:"toolbar_material", url:'material/search_material_by_'+name+'?searchValue='+value,
+			nowrap:true, toolbar:"toolbar_material", url:'Material/search_material_by_'+name+'?searchValue='+value,
 			loadMsg:'数据加载中......',  fitColumns:true,//允许表格自动缩放,以适应父容器
 	        columns : [ [ 
 				{field : 'ck', checkbox:true },
@@ -156,12 +156,12 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
 	};
 	
 	function updateMaterialNote(){
-		$.get("material/edit_judge",'',function(data){
+		$.get("Material/edit_judge",'',function(data){
     		if(data.msg != null){
     			$.messager.alert('提示', data.msg);
     		}else{
     			materialNoteEditor.sync();
-    			$.post("material/update_note",$("#materialNoteForm").serialize(), function(data){
+    			$.post("Material/update_note",$("#materialNoteForm").serialize(), function(data){
     				if(data.status == 200){
     					$("#materialNoteDialog").dialog("close");
     					$("#materialList").datagrid("reload");
@@ -187,7 +187,7 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
 	}
 	
 	function material_add(){
-    	$.get("material/add_judge",'',function(data){
+    	$.get("Material/add_judge",'',function(data){
         		if(data.msg != null){
         			$.messager.alert('提示', data.msg);
         		}else{
@@ -197,7 +197,7 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
 	    }
     
     function material_edit(){
-    	$.get("material/edit_judge",'',function(data){
+    	$.get("Material/edit_judge",'',function(data){
         		if(data.msg != null){
         			$.messager.alert('提示', data.msg);
         		}else{
@@ -225,7 +225,7 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
     
     
     function material_delete(){
-    		$.get("material/delete_judge",'',function(data){
+    		$.get("Material/delete_judge",'',function(data){
         		if(data.msg != null){
         			$.messager.alert('提示', data.msg);
         		}else{
@@ -237,7 +237,7 @@ function doSearch_material(value,name){ //用户输入用户名,点击搜素,触
         	    	$.messager.confirm('确认','确定删除编号为 '+ids+' 的记录吗？',function(r){
         	    	    if (r){
         	    	    	var params = {"ids":ids};
-        	            	$.post("material/delete_batch",params, function(data){
+        	            	$.post("Material/delete_batch",params, function(data){
         	        			if(data.status == 200){
         	        				$.messager.alert('提示','删除成功!',undefined,function(){
         	        					$("#materialList").datagrid("reload");
