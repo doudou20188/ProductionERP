@@ -57,7 +57,7 @@
 	});
 	
 	function submitMaterialEditForm(){
-		$.get("material/edit_judge",'',function(data){
+		$.get("Material/edit_judge",'',function(data){
     		if(data.msg != null){
     			$.messager.alert('提示', data.msg);
     		}else{
@@ -67,7 +67,7 @@
     			}
     			//同步文本框中的备注
     			materialEditEditor.sync();
-    			$.post("material/update_all",$("#materialEditForm").serialize(), function(data){
+    			$.post("Material/update_all",$("#materialEditForm").serialize(), function(data){
     				if(data.status == 200){
     					$.messager.alert('提示','修改成功!','info',function(){
     						$("#materialEditWindow").window('close');

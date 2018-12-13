@@ -23,7 +23,8 @@
 	        <tr>
 	            <td>收入数量:</td>
 	            <td>
-	            	<input class="easyui-textbox" type="text" name="ammount" style="width: 160px;"/>
+					<%--次数ammount改成amount--%>
+	            	<input class="easyui-textbox" type="text" name="amount" style="width: 160px;"/>
 	            </td>
 	        </tr>
 	        <tr>
