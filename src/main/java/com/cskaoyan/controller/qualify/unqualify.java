@@ -22,11 +22,6 @@ public class unqualify {
     /*下面是不合格品管理的增删改查代码*/
     @RequestMapping("unqualify/find")
     public String unqualify_find(HttpSession session) {
-        ArrayList sysPermissionList = new ArrayList();
-        sysPermissionList.add("unqualify:add");
-        sysPermissionList.add("unqualify:edit");
-        sysPermissionList.add("unqualify:delete");
-        session.setAttribute("sysPermissionList",sysPermissionList);
 
 
         return "unqualify_list";
@@ -350,11 +345,7 @@ public class unqualify {
     @RequestMapping("measure/find")
 
     public String measure_find(HttpSession session) {
-        ArrayList sysPermissionList = new ArrayList();
-        sysPermissionList.add("fMeasureCheck:add");
-        sysPermissionList.add("fMeasureCheck:edit");
-        sysPermissionList.add("fMeasureCheck:delete");
-        session.setAttribute("sysPermissionList",sysPermissionList);
+
         return "measurement_list";
     }
 
@@ -746,11 +737,7 @@ public class unqualify {
     @RequestMapping("f_count_check/find")
 
     public String f_count_check_find(HttpSession session) {
-        ArrayList sysPermissionList = new ArrayList();
-        sysPermissionList.add("fCountCheck:add");
-        sysPermissionList.add("fCountCheck:edit");
-        sysPermissionList.add("fCountCheck:delete");
-        session.setAttribute("sysPermissionList",sysPermissionList);
+
         return "f_count_check_list";
     }
 
@@ -986,11 +973,7 @@ public class unqualify {
     @RequestMapping("p_measure_check/find")
 
     public String p_measure_check_find(HttpSession session) {
-        ArrayList sysPermissionList = new ArrayList();
-        sysPermissionList.add("pMeasureCheck:add");
-        sysPermissionList.add("pMeasureCheck:edit");
-        sysPermissionList.add("pMeasureCheck:delete");
-        session.setAttribute("sysPermissionList",sysPermissionList);
+
         return "p_measure_check_list";
     }
 
@@ -1174,11 +1157,7 @@ public class unqualify {
     @RequestMapping("p_count_check/find")
 
     public String p_count_check_find(HttpSession session) {
-        ArrayList sysPermissionList = new ArrayList();
-        sysPermissionList.add("pCountCheck:add");
-        sysPermissionList.add("pCountCheck:edit");
-        sysPermissionList.add("pCountCheck:delete");
-        session.setAttribute("sysPermissionList",sysPermissionList);
+
         return "p_count_check_list";
     }
 
