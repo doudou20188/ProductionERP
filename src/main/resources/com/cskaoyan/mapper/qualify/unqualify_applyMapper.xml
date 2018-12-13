@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mapper.qualify.unqualify_applyMapper">
+  <resultMap id="BaseResultMap" type="com.cskaoyan.domain.qualify.unqualify_apply">
+    <id column="unqualify_apply_id" jdbcType="VARCHAR" property="unqualifyApplyId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="unqualify_item" jdbcType="VARCHAR" property="unqualifyItem" />
+    <result column="unqualify_count" jdbcType="INTEGER" property="unqualifyCount" />
+    <result column="assembly_date" jdbcType="TIMESTAMP" property="assemblyDate" />
+    <result column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="apply_date" jdbcType="TIMESTAMP" property="applyDate" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+
+<!--这些是我写的，其他的是自动生成的-->
+ <!-- <resultMap id="BaseTechnologyPlanMap" type="com.cskaoyan.domain.qualify.technology_plan">
+    <id column="technology_plan_id" jdbcType="VARCHAR" property="technologyPlanId" />
+    <result column="technology_id" jdbcType="VARCHAR" property="technologyId" />
+    <result column="batch_amount" jdbcType="INTEGER" property="batchAmount" />
+    <result column="start_plan" jdbcType="TIMESTAMP" property="startPlan" />
+    <result column="end_plan" jdbcType="TIMESTAMP" property="endPlan" />
+    <result column="commit_plan" jdbcType="TIMESTAMP" property="commitPlan" />
+    <result column="technology_plan_start" jdbcType="TIMESTAMP" property="technologyPlanStart" />
+    <result column="technology_plan_end" jdbcType="TIMESTAMP" property="technologyPlanEnd" />
+  </resultMap>
+  <sql id="Base_TechnologyPlan_List">
+    technology_plan_id, technology_id, batch_amount, start_plan, end_plan, commit_plan,
+    technology_plan_start, technology_plan_end
+  </sql>
+  <select id="Technology" parameterType="java.lang.String" resultMap="BaseTechnologyPlanMap">
+    select
+    <include refid="Base_TechnologyPlan_List" />
+    from technology_plan
+
+  </select>-->
+
+
+
+
+
+
+
+<!--
+  <update id="updateorderByorder" parameterType="com.cskaoyan.domain.qualify.c_order">
+    update c_order
+    set custom_id = #{c_order.customId},
+      product_id = #{c_order.productId},
+      order_date = #{c_order.orderDate},
+      request_date = #{c_order.requestDate},
+      note = #{c_order.note},
+      quantity = #{c_order.quantity},
+      unit_price = #{c_order.unitPrice},
+      unit = #{c_order.unit},
+      image = #{c_order.image},
+      file = #{c_order.file},
+      status = #{c_order.status}
+    where order_id = #{c_order.orderId}
+  </update>
+-->
+
+
+
+
+
+
+
+
+
+
+
+  <select id="selectprocess_count_checkByprocess_count" parameterType="java.lang.String" resultMap="Baseprocess_count_checkMap">
+    select
+    <include refid="Base_process_count_check_List" />
+    from process_count_check
+    where p_count_check_id = #{id}
+  </select>
+
+
+
+
+  <delete id="deleteProcess_count_checkByprocess_count" parameterType="java.lang.String">
+    delete from process_count_check
+    where p_count_check_id = #{id}
+  </delete>
+
+
+
+  <!--<select id="selectProcessByProcessId" parameterType="java.lang.String" resultMap="BaseprocessMap">
+    select
+    <include refid="Base_process_List"/>
+    from process
+    where process_id = #{id}
+  </select>-->
+
+
+
+
+  <update id="updateProcess_count_checkByProcess_count" parameterType="com.cskaoyan.domain.qualify.process_count_check">
+    update process_count_check
+    set process_id = #{process_count_check.processId},
+      check_item = #{process_count_check.checkItem},
+      sample = #{process_count_check.sample},
+      check_number = #{process_count_check.checkNumber},
+      unqualify = #{process_count_check.unqualify},
+      qualify = #{process_count_check.qualify},
+      cdate = #{process_count_check.cdate},
+      measure_data = #{process_count_check.measureData},
+      emp_id = #{process_count_check.empId},
+      result = #{process_count_check.result},
+      note = #{process_count_check.note}
+    where p_count_check_id = #{process_count_check.pCountCheckId}
+  </update>
+
+
+
+
+
+  <insert id="insertProcess_count_checkByProcess_count" parameterType="com.cskaoyan.domain.qualify.process_count_check">
+    insert into process_count_check (p_count_check_id, process_id, check_item,
+      sample, check_number, unqualify,
+      qualify, cdate, measure_data,
+      emp_id, result, note
+      )
+    values (#{process_count_check.pCountCheckId},
+     #{process_count_check.processId},
+     #{process_count_check.checkItem},
+      #{process_count_check.sample},
+       #{process_count_check.checkNumber},
+       #{process_count_check.unqualify},
+      #{process_count_check.qualify},
+       #{process_count_check.cdate},
+       #{process_count_check.measureData},
+      #{process_count_check.empId},
+      #{process_count_check.result},
+       #{process_count_check.note}
+      )
+  </insert>
+
+
+
+
+
+
+  <resultMap id="Baseprocess_count_checkMap" type="com.cskaoyan.domain.qualify.process_count_check">
+    <id column="p_count_check_id" jdbcType="VARCHAR" property="pCountCheckId" />
+    <result column="process_id" jdbcType="VARCHAR" property="processId" />
+    <result column="check_item" jdbcType="VARCHAR" property="checkItem" />
+    <result column="sample" jdbcType="INTEGER" property="sample" />
+    <result column="check_number" jdbcType="INTEGER" property="checkNumber" />
+    <result column="unqualify" jdbcType="INTEGER" property="unqualify" />
+    <result column="qualify" jdbcType="DECIMAL" property="qualify" />
+    <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+    <result column="measure_data" jdbcType="VARCHAR" property="measureData" />
+    <result column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="result" jdbcType="VARCHAR" property="result" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_process_count_check_List">
+    p_count_check_id, process_id, check_item, sample, check_number, unqualify, qualify,
+    cdate, measure_data, emp_id, result, note
+  </sql>
+  <select id="selectAllProcess_count_check" parameterType="java.lang.String" resultMap="Baseprocess_count_checkMap">
+    select
+    <include refid="Base_process_count_check_List" />
+    from process_count_check
+
+  </select>
+
+
+ <!-- <select id="selectProductByProductId" parameterType="java.lang.String" resultMap="BaseProductMap">
+    select
+    <include refid="Base_Product_List" />
+    from product
+    where product_id = #{id}
+  </select>-->
+
+
+  <select id="selectprocess_measure_checkByprocess_measure" parameterType="java.lang.String" resultMap="Baseprocess_measure_checkMap">
+    select
+    <include refid="Base_process_measure_check_List" />
+    from process_measure_check
+    where p_measure_check_id = #{id}
+  </select>
+
+
+  <delete id="deleteProcess_measure_checkByprocess_measure" parameterType="java.lang.String">
+    delete from process_measure_check
+    where p_measure_check_id = #{id}
+  </delete>
+
+  <update id="updateProcess_measure_checkByProcess_measure" parameterType="com.cskaoyan.domain.qualify.process_measure_check">
+    update process_measure_check
+    set process_id = #{process_measure_check.processId},
+      check_item = #{process_measure_check.checkItem},
+      cdate = #{process_measure_check.cdate},
+      measure_data = #{process_measure_check.measureData},
+      emp_id = #{process_measure_check.empId},
+      result = #{process_measure_check.result},
+      note = #{process_measure_check.note}
+    where p_measure_check_id = #{process_measure_check.pMeasureCheckId}
+  </update>
+
+
+<!--
+  <resultMap id="BaseTechnologyMap" type="com.cskaoyan.domain.technology.technology">
+    <id column="technology_id" jdbcType="VARCHAR" property="technologyId" />
+    <result column="technology_name" jdbcType="VARCHAR" property="technologyName" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="vital_process_period" jdbcType="VARCHAR" property="vitalProcessPeriod" />
+    <result column="standard_capacity" jdbcType="INTEGER" property="standardCapacity" />
+    <result column="overtime_standard_capacity" jdbcType="INTEGER" property="overtimeStandardCapacity" />
+    <result column="overtime_overfulfil_capacity" jdbcType="INTEGER" property="overtimeOverfulfilCapacity" />
+    <result column="double_capacity" jdbcType="INTEGER" property="doubleCapacity" />
+    <result column="overfulfil_capacity" jdbcType="INTEGER" property="overfulfilCapacity" />
+  </resultMap>
+  <sql id="Base_Technology_List">
+    technology_id, technology_name, price, vital_process_period, standard_capacity, overtime_standard_capacity,
+    overtime_overfulfil_capacity, double_capacity, overfulfil_capacity
+  </sql>
+-->
+
+
+
+  <insert id="insertProcess_measure_checkByProcess_measure" parameterType="com.cskaoyan.domain.qualify.process_measure_check">
+    insert into process_measure_check (p_measure_check_id, process_id, check_item,
+      cdate, measure_data, emp_id,
+      result, note)
+    values (#{process_measure_check.pMeasureCheckId},
+     #{process_measure_check.processId},
+     #{process_measure_check.checkItem},
+      #{process_measure_check.cdate},
+      #{process_measure_check.measureData},
+       #{process_measure_check.empId},
+      #{process_measure_check.result},
+      #{process_measure_check.note})
+  </insert>
+
+
+
+
+
+  <resultMap id="Baseprocess_measure_checkMap" type="com.cskaoyan.domain.qualify.process_measure_check">
+    <id column="p_measure_check_id" jdbcType="VARCHAR" property="pMeasureCheckId" />
+    <result column="process_id" jdbcType="VARCHAR" property="processId" />
+    <result column="check_item" jdbcType="VARCHAR" property="checkItem" />
+    <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+    <result column="measure_data" jdbcType="VARCHAR" property="measureData" />
+    <result column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="result" jdbcType="VARCHAR" property="result" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_process_measure_check_List">
+    p_measure_check_id, process_id, check_item, cdate, measure_data, emp_id, result,
+    note
+  </sql>
+  <select id="selectAllProcess_measure_check" parameterType="java.lang.String" resultMap="Baseprocess_measure_checkMap">
+    select
+    <include refid="Base_process_measure_check_List" />
+    from process_measure_check
+  </select>
+
+
+
+
+  <select id="selectfinal_count_checkByorderId" parameterType="java.lang.String" resultMap="Basefinal_count_checkMap">
+    select
+    <include refid="Base_final_count_check_List" />
+    from final_count_check
+    where order_id = #{id}
+  </select>
+
+
+  <select id="selectfinal_count_checkByfCountCheckId" parameterType="java.lang.String" resultMap="Basefinal_count_checkMap">
+    select
+    <include refid="Base_final_count_check_List" />
+    from final_count_check
+    where f_count_check_id = #{id}
+  </select>
+
+
+
+  <delete id="deleteFinal_count_checkByfinal_countId" parameterType="java.lang.String">
+    delete from final_count_check
+    where f_count_check_id = #{id}
+  </delete>
+
+
+
+
+  <update id="updatefinal_count_checkByfinal_count" parameterType="com.cskaoyan.domain.qualify.final_count_check">
+    update final_count_check
+    set order_id = #{final_count_check.orderId},
+      check_item = #{final_count_check.checkItem},
+      sample = #{final_count_check.sample},
+      check_number = #{final_count_check.checkNumber},
+      unqualify = #{final_count_check.unqualify},
+      qualify = #{final_count_check.qualify},
+      cdate = #{final_count_check.cdate},
+      measure_data = #{final_count_check.measureData},
+      emp_id = #{final_count_check.empId},
+      result = #{final_count_check.result},
+      note = #{final_count_check.note}
+    where f_count_check_id = #{final_count_check.fCountCheckId}
+  </update>
+
+
+
+  <!--<resultMap id="BaseprocessMap" type="com.cskaoyan.domain.qualify.process">
+    <id column="process_id" jdbcType="VARCHAR" property="processId" />
+    <result column="technology_plan_id" jdbcType="VARCHAR" property="technologyPlanId" />
+    <result column="sequence" jdbcType="INTEGER" property="sequence" />
+    <result column="quota" jdbcType="INTEGER" property="quota" />
+  </resultMap>
+  <sql id="Base_process_List">
+    process_id, technology_plan_id, sequence, quota
+  </sql>
+  <select id="selectAllProcess" parameterType="java.lang.String" resultMap="BaseprocessMap">
+    select
+    <include refid="Base_process_List" />
+    from process
+  </select>
+-->
+
+
+
+  <insert id="insertFinal_count_checkByfinal_count" parameterType="com.cskaoyan.domain.qualify.final_count_check">
+    insert into final_count_check (f_count_check_id, order_id, check_item,
+      sample, check_number, unqualify,
+      qualify, cdate, measure_data,
+      emp_id, result, note
+      )
+    values (#{final_count_check.fCountCheckId}, #{final_count_check.orderId}, #{final_count_check.checkItem},
+      #{final_count_check.sample}, #{final_count_check.checkNumber}, #{final_count_check.unqualify},
+      #{final_count_check.qualify}, #{final_count_check.cdate}, #{final_count_check.measureData},
+      #{final_count_check.empId}, #{final_count_check.result}, #{final_count_check.note}
+      )
+  </insert>
+
+
+
+  <resultMap id="Basefinal_count_checkMap" type="com.cskaoyan.domain.qualify.final_count_check">
+    <id column="f_count_check_id" jdbcType="VARCHAR" property="fCountCheckId" />
+    <result column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="check_item" jdbcType="VARCHAR" property="checkItem" />
+    <result column="sample" jdbcType="INTEGER" property="sample" />
+    <result column="check_number" jdbcType="INTEGER" property="checkNumber" />
+    <result column="unqualify" jdbcType="INTEGER" property="unqualify" />
+    <result column="qualify" jdbcType="DECIMAL" property="qualify" />
+    <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+    <result column="measure_data" jdbcType="VARCHAR" property="measureData" />
+    <result column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="result" jdbcType="VARCHAR" property="result" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_final_count_check_List">
+    f_count_check_id, order_id, check_item, sample, check_number, unqualify, qualify,
+    cdate, measure_data, emp_id, result, note
+  </sql>
+  <select id="selectAllfinal_count_check" parameterType="java.lang.String" resultMap="Basefinal_count_checkMap">
+    select
+    <include refid="Base_final_count_check_List" />
+    from final_count_check
+  </select>
+
+
+
+
+
+  <select id="selectC_orderfromMeasuretByOrderId" parameterType="java.lang.String" resultMap="Basemeasuret_checkMap">
+    select
+    <include refid="Base_measuret_check_List" />
+    from final_measuret_check
+    where order_id = #{id}
+  </select>
+
+  <select id="selectMeasureById" parameterType="java.lang.String" resultMap="Basemeasuret_checkMap">
+    select
+    <include refid="Base_measuret_check_List" />
+    from final_measuret_check
+    where f_measure_check_id = #{id}
+  </select>
+
+
+  <delete id="deletemeasureByMeasureId" parameterType="java.lang.String">
+    delete from final_measuret_check
+    where f_measure_check_id = #{id}
+  </delete>
+
+
+
+  <!--<update id="updateEmployeeByEmployee" parameterType="com.cskaoyan.domain.qualify.Employee">
+    update employee
+    set emp_name = #{employee.empName},
+      sex = #{employee.sex},
+      id_code = #{employee.idCode},
+      birthday = #{employee.birthday},
+      join_date = #{employee.joinDate},
+      status = #{employee.status},
+      education = #{employee.education},
+      degree = #{employee.degree},
+      major = #{employee.major},
+      graduate_school = #{employee.graduateSchool},
+      education_form = #{employee.educationForm},
+      department_id = #{employee.departmentId}
+    where emp_id = #{employee.empId}
+  </update>-->
+
+
+
+  <insert id="insertfinal_measuret_checkByfinal_measuret" parameterType="com.cskaoyan.domain.qualify.final_measuret_check">
+    insert into final_measuret_check (f_measure_check_id, order_id, check_item,
+      cdate, measure_data, emp_id,
+      result, note)
+    values (#{final_measuret.fMeasureCheckId}, #{final_measuret.orderId}, #{final_measuret.checkItem},
+      #{final_measuret.cdate},  #{final_measuret.measureData}, #{final_measuret.empId},
+      #{final_measuret.result}, #{final_measuret.note})
+  </insert>
+
+
+  <update id="updatefinal_measuret_checkByfinal_measuret" parameterType="com.cskaoyan.domain.qualify.final_measuret_check">
+    update final_measuret_check
+    set order_id = #{final_measuret.orderId},
+      check_item = #{final_measuret.checkItem},
+      cdate = #{final_measuret.cdate},
+      measure_data = #{final_measuret.measureData},
+      emp_id = #{final_measuret.empId},
+      result = #{final_measuret.result},
+      note = #{final_measuret.note}
+    where f_measure_check_id = #{final_measuret.fMeasureCheckId}
+  </update>
+
+
+
+
+ <!-- <select id="selectAllC_order" parameterType="java.lang.String" resultMap="BaseC_orderMap">
+    select
+    <include refid="Base_C_order_List" />
+    from c_order
+
+  </select>
+  <resultMap id="BaseC_orderMap" type="com.cskaoyan.domain.qualify.c_order">
+    <id column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="custom_id" jdbcType="VARCHAR" property="customId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="order_date" jdbcType="TIMESTAMP" property="orderDate" />
+    <result column="request_date" jdbcType="TIMESTAMP" property="requestDate" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+    <result column="unit_price" jdbcType="DECIMAL" property="unitPrice" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="file" jdbcType="VARCHAR" property="file" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_C_order_List">
+    order_id, custom_id, product_id, order_date, request_date, note, quantity, unit_price,
+    unit, image, file, status
+  </sql>
+  <select id="selectC_orderByOrderId" parameterType="java.lang.String" resultMap="BaseC_orderMap">
+    select
+    <include refid="Base_C_order_List" />
+    from c_order
+    where order_id = #{id}
+  </select>
+-->
+
+
+
+
+ <!-- <resultMap id="BaseCustomMap" type="com.cskaoyan.domain.qualify.custom">
+    <id column="custom_id" jdbcType="VARCHAR" property="customId" />
+    <result column="custom_name" jdbcType="VARCHAR" property="customName" />
+    <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="fax" jdbcType="VARCHAR" property="fax" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="owner_name" jdbcType="VARCHAR" property="ownerName" />
+    <result column="owner_tel" jdbcType="VARCHAR" property="ownerTel" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_Custom_List">
+    custom_id, custom_name, full_name, address, fax, email, owner_name, owner_tel, status,
+    note
+  </sql>
+  <select id="selectAllCustom" parameterType="java.lang.String" resultMap="BaseCustomMap">
+    select
+    <include refid="Base_Custom_List" />
+    from custom
+
+  </select>-->
+
+    <resultMap id="Basemeasuret_checkMap" type="com.cskaoyan.domain.qualify.final_measuret_check">
+      <id column="f_measure_check_id" jdbcType="VARCHAR" property="fMeasureCheckId" />
+      <result column="order_id" jdbcType="VARCHAR" property="orderId" />
+      <result column="check_item" jdbcType="VARCHAR" property="checkItem" />
+      <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+      <result column="measure_data" jdbcType="VARCHAR" property="measureData" />
+      <result column="emp_id" jdbcType="VARCHAR" property="empId" />
+      <result column="result" jdbcType="VARCHAR" property="result" />
+      <result column="note" jdbcType="VARCHAR" property="note" />
+    </resultMap>
+    <sql id="Base_measuret_check_List">
+    f_measure_check_id, order_id, check_item, cdate, measure_data, emp_id, result, note
+  </sql>
+    <select id="selectAllfinal_measuret_check" parameterType="java.lang.String" resultMap="Basemeasuret_checkMap">
+      select
+      <include refid="Base_measuret_check_List" />
+      from final_measuret_check
+    </select>
+
+
+
+
+
+
+
+
+    <select id="selectProductIdByproductname"  resultType="String">
+    select
+   product_id
+    from product
+    where product_name = #{productName}
+  </select>
+
+
+
+  <select id="selectQualifyByproductId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from unqualify_apply
+    where product_id = #{productId}
+  </select>
+
+
+  <select id="selectQualifyById" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from unqualify_apply
+    where unqualify_apply_id = #{id}
+  </select>
+
+
+
+
+  <delete id="deleteUnqualify_applyByunqualify" parameterType="java.lang.String">
+    delete from unqualify_apply
+    where unqualify_apply_id = #{ids}
+  </delete>
+
+
+
+  <update id="updateUnqualify_applyByunqualify" parameterType="com.cskaoyan.domain.qualify.unqualify_apply">
+    update unqualify_apply
+    set product_id = #{unqualify_apply.productId},
+      unqualify_item = #{unqualify_apply.unqualifyItem},
+      unqualify_count = #{unqualify_apply.unqualifyCount},
+      assembly_date = #{unqualify_apply.assemblyDate},
+      emp_id = #{unqualify_apply.empId},
+      apply_date = #{unqualify_apply.applyDate},
+      note = #{unqualify_apply.note}
+    where unqualify_apply_id = #{unqualify_apply.unqualifyApplyId}
+  </update>
+
+
+  <insert id="addUnqualify_apply" parameterType="com.cskaoyan.domain.qualify.unqualify_apply">
+    insert into unqualify_apply (unqualify_apply_id, product_id, unqualify_item,
+      unqualify_count, assembly_date, emp_id,
+      apply_date, note)
+    values (#{unqualify_apply.unqualifyApplyId}, #{unqualify_apply.productId}, #{unqualify_apply.unqualifyItem},
+      #{unqualify_apply.unqualifyCount}, #{unqualify_apply.assemblyDate}, #{unqualify_apply.empId},
+      #{unqualify_apply.applyDate}, #{unqualify_apply.note})
+  </insert>
+
+
+
+  <!--<resultMap id="BaseProductMap" type="com.cskaoyan.domain.qualify.product">
+    <id column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_type" jdbcType="DOUBLE" property="productType" />
+    <result column="image" jdbcType="DOUBLE" property="image" />
+    <result column="note" jdbcType="INTEGER" property="note" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Product_List">
+    product_id, product_name, product_type,image,note,status
+  </sql>
+  <select id="selectAllProduct"  resultMap="BaseProductMap">
+    select
+    <include refid="Base_Product_List" />
+    from product
+  </select>-->
+
+  <!--<update id="updateproductByproduct" parameterType="com.cskaoyan.domain.qualify.product">
+    update product
+    set product_name = #{product.productName},
+     product_type = #{product.productType},
+      image = #{product.image},
+      note= #{product.note},
+      status= #{product.status}
+    where product_id = #{product.productId}
+  </update>-->
+
+
+
+<!--  <resultMap id="BaseEmployeeMap" type="com.cskaoyan.domain.qualify.Employee">
+    <id column="emp_id" jdbcType="VARCHAR" property="empId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="id_code" jdbcType="VARCHAR" property="idCode" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="join_date" jdbcType="DATE" property="joinDate" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
+    <result column="education_form" jdbcType="VARCHAR" property="educationForm" />
+    <result column="department_id" jdbcType="VARCHAR" property="departmentId" />
+  </resultMap>
+  <sql id="Base_Employee_List">
+    emp_id, emp_name, sex, id_code, birthday, join_date, status, education, degree, major,
+    graduate_school, education_form, department_id
+  </sql>
+  <select id="selectAllEmployee"  resultMap="BaseEmployeeMap">
+    select
+    <include refid="Base_Employee_List" />
+    from employee
+  </select>-->
+
+
+
+
+  <select id="selectproductNameById"  resultType="String">
+    select
+   product_name
+    from product
+    where product_id = #{productId}
+  </select>
+
+
+
+
+  <select id="selectempNameById"  resultType="String">
+    select
+  emp_name
+    from employee
+    where emp_id = #{empId}
+  </select>
+
+
+
+
+
+<!--  <resultMap id="BaseDepartmentMap" type="com.cskaoyan.domain.qualify.department">
+      <id column="department_id" jdbcType="VARCHAR" property="departmentId" />
+      <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
+      <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+
+
+  <sql id="Base_department_List">
+    department_id, department_name, note
+  </sql>
+  <select id="selectAllDepartment"  resultMap="BaseDepartmentMap">
+    select
+    <include refid="Base_department_List" />
+    from department
+
+  </select>
+
+  <select id="selectDepartmentByDepartmentId" parameterType="java.lang.String" resultMap="BaseDepartmentMap">
+    select
+    <include refid="Base_department_List" />
+    from department
+    where department_id = #{id}
+  </select>-->
+
+
+  <sql id="Base_Column_List">
+    unqualify_apply_id, product_id, unqualify_item, unqualify_count, assembly_date, emp_id,
+    apply_date, note
+  </sql>
+
+  <select id="selectAllQualifyMessage"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from unqualify_apply
+
+  </select>
+<!--这些是自动生成的-->
+
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from unqualify_apply
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from unqualify_apply
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cskaoyan.domain.qualify.unqualify_apply">
+    insert into unqualify_apply (unqualify_apply_id, product_id, unqualify_item, 
+      unqualify_count, assembly_date, emp_id, 
+      apply_date, note)
+    values (#{unqualifyApplyId,jdbcType=VARCHAR}, #{productId,jdbcType=VARCHAR}, #{unqualifyItem,jdbcType=VARCHAR}, 
+      #{unqualifyCount,jdbcType=INTEGER}, #{assemblyDate,jdbcType=TIMESTAMP}, #{empId,jdbcType=VARCHAR}, 
+      #{applyDate,jdbcType=TIMESTAMP}, #{note,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cskaoyan.domain.qualify.unqualify_apply">
+    insert into unqualify_apply
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="unqualifyApplyId != null">
+        unqualify_apply_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="unqualifyItem != null">
+        unqualify_item,
+      </if>
+      <if test="unqualifyCount != null">
+        unqualify_count,
+      </if>
+      <if test="assemblyDate != null">
+        assembly_date,
+      </if>
+      <if test="empId != null">
+        emp_id,
+      </if>
+      <if test="applyDate != null">
+        apply_date,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="unqualifyApplyId != null">
+        #{unqualifyApplyId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyItem != null">
+        #{unqualifyItem,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyCount != null">
+        #{unqualifyCount,jdbcType=INTEGER},
+      </if>
+      <if test="assemblyDate != null">
+        #{assemblyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        #{empId,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDate != null">
+        #{applyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cskaoyan.domain.qualify.unqualify_apply">
+    update unqualify_apply
+    <set>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyItem != null">
+        unqualify_item = #{unqualifyItem,jdbcType=VARCHAR},
+      </if>
+      <if test="unqualifyCount != null">
+        unqualify_count = #{unqualifyCount,jdbcType=INTEGER},
+      </if>
+      <if test="assemblyDate != null">
+        assembly_date = #{assemblyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        emp_id = #{empId,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDate != null">
+        apply_date = #{applyDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cskaoyan.domain.qualify.unqualify_apply">
+    update unqualify_apply
+    set product_id = #{productId,jdbcType=VARCHAR},
+      unqualify_item = #{unqualifyItem,jdbcType=VARCHAR},
+      unqualify_count = #{unqualifyCount,jdbcType=INTEGER},
+      assembly_date = #{assemblyDate,jdbcType=TIMESTAMP},
+      emp_id = #{empId,jdbcType=VARCHAR},
+      apply_date = #{applyDate,jdbcType=TIMESTAMP},
+      note = #{note,jdbcType=VARCHAR}
+    where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </update>
+</mapper>

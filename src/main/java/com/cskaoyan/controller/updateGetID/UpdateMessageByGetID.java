@@ -1,9 +1,13 @@
 package com.cskaoyan.controller.updateGetID;
 
+import com.cskaoyan.domain.technology.Processes;
+import com.cskaoyan.domain.technology.Technology;
 import com.cskaoyan.domain.yangtao.*;
 import com.cskaoyan.domain.yangtao.Process;
 import com.cskaoyan.service.devicr.DeviceService;
+import com.cskaoyan.service.technology.TechnologyService;
 import com.cskaoyan.service.yangtao.*;
+import com.cskaoyan.service.technology.ProcessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,8 +53,8 @@ public class UpdateMessageByGetID {
     }
     @ResponseBody
     @RequestMapping("process/get/{theNumId}")
-    public Process updateProcessGetID(@PathVariable("theNumId")String theNumId){
-        Process processById = processService.findProcessById(theNumId);
+    public Processes updateProcessGetID(@PathVariable("theNumId")String theNumId){
+        Processes processById = processService.findProcessById(theNumId);
         return processById;
 
 

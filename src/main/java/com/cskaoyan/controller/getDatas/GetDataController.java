@@ -1,15 +1,18 @@
 package com.cskaoyan.controller.getDatas;
 
 import com.cskaoyan.domain.device.Device;
+import com.cskaoyan.domain.technology.Processes;
+import com.cskaoyan.domain.technology.Technology;
 import com.cskaoyan.domain.yangtao.*;
 import com.cskaoyan.domain.yangtao.Process;
 import com.cskaoyan.service.devicr.DeviceService;
+import com.cskaoyan.service.technology.TechnologyService;
 import com.cskaoyan.service.yangtao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import com.cskaoyan.service.technology.ProcessService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -119,9 +122,9 @@ public class GetDataController {
     @RequestMapping("/process/get_data")
     public List processGetData(){
         //不重复处理
-        List<Process> processes=processService.findAllProcess();
+        List<Processes> processes=processService.findAllProcess();
         ArrayList arrayList = new ArrayList();
-        for (Process process:
+        for (Processes process:
                 processes) {
             HashMap hashMap = new HashMap();
             hashMap.put("processId",process.getProcessId());
@@ -136,11 +139,11 @@ public class GetDataController {
 
 //    @ResponseBody
 //    @RequestMapping("/deviceList/get_data")
-//    public Device[] deviceListGetData(){
+//    public device[] deviceListGetData(){
 //        //不重复处理
 //        return deviceService.getData();
 ////        ArrayList arrayList = new ArrayList();
-////        for (com.cskaoyan.domain.device.Device device:
+////        for (com.cskaoyan.domain.device.device device:
 ////                deviceList) {
 ////            HashMap hashMap = new HashMap();
 ////            hashMap.put("deviceId",device.getDeviceId());
