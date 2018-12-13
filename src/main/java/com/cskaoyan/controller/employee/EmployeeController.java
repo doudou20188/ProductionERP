@@ -8,6 +8,7 @@ import com.cskaoyan.service.employee.DepartmentService;
 import com.cskaoyan.service.employee.EmployeeService;
 import com.cskaoyan.util.CustomResult;
 import com.cskaoyan.util.EUDataGridResult;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -88,6 +89,7 @@ public class EmployeeController {
     }
 
     @RequestMapping("/add")
+    @RequiresPermissions(value = {"employee:add"})
     public String add(){
         return "employee_add";
     }

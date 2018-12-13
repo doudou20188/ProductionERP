@@ -53,7 +53,9 @@
 
                 <!--配置授权操作的方法有3种，这里选择第1种：-->
                 <!--（1）在xml文件中配置授权操作-->
-                /employee/add = perms[employee:add]
+
+                <!--add使用注解完成-->
+                <!--/employee/add = perms[employee:add]-->
                 /employee/edit = perms[employee:edit]
                 /employee/delete_batch = perms[employee:delete]
 
@@ -90,6 +92,26 @@
         <property name="globalSessionTimeout" value="600000"/>
         <!-- 删除失效的session -->
         <property name="deleteInvalidSessions" value="true"/>
+    </bean>
+
+    <!--增加使用注解进项权限管理功能-->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"></bean>
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor" />
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+    <!-- 配置异常跳转页面，此处异常页面是使用shiro注解时没有权限访问的跳转页面，不配置则会报500错误 -->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="org.apache.shiro.authz.UnauthorizedException">
+                    <!-- 没有权限时跳转的页面 -->
+                    /refuse
+                </prop>
+            </props>
+        </property>
     </bean>
 
 
