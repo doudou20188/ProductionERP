@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mapper.device.DeviceMaintainMapper">
+    <resultMap id="BaseResultMap" type="com.cskaoyan.domain.device.DeviceMaintain">
+        <id column="device_maintain_id" jdbcType="VARCHAR" property="deviceMaintainId"/>
+        <result column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId"/>
+        <result column="device_maintain_emp_id" jdbcType="VARCHAR" property="deviceMaintainEmpId"/>
+        <result column="device_maintain_date" jdbcType="TIMESTAMP" property="deviceMaintainDate"/>
+        <result column="device_maintain_result" jdbcType="VARCHAR" property="deviceMaintainResult"/>
+        <result column="device_maintain_cost" jdbcType="DECIMAL" property="deviceMaintainCost"/>
+        <result column="note" jdbcType="VARCHAR" property="note"/>
+        <result column="device_maintain_emp" jdbcType="VARCHAR" property="deviceMaintainEmp"/>
+    </resultMap>
+    <select id="selectList" resultMap="BaseResultMap">
+     SELECT
+device_maintain.device_maintain_id,
+device_maintain.device_fault_id,
+device_maintain.device_maintain_emp_id,
+device_maintain.device_maintain_date,
+device_maintain.device_maintain_result,
+device_maintain.device_maintain_cost,
+device_maintain.note,
+employee.emp_name AS device_maintain_emp
+FROM
+device_maintain
+INNER JOIN employee ON device_maintain.device_maintain_emp_id = employee.emp_id
+</select>
+    <insert id="insertDeviceMaintain" parameterType="com.cskaoyan.domain.device.DeviceMaintain">
+    insert into device_maintain (device_maintain_id, device_fault_id,
+      device_maintain_emp_id, device_maintain_date,
+      device_maintain_result, device_maintain_cost,
+      note)
+    values (#{deviceMaintainId,jdbcType=VARCHAR}, #{deviceFaultId,jdbcType=VARCHAR},
+      #{deviceMaintainEmpId,jdbcType=VARCHAR}, #{deviceMaintainDate,jdbcType=TIMESTAMP},
+      #{deviceMaintainResult,jdbcType=VARCHAR}, #{deviceMaintainCost,jdbcType=DECIMAL},
+      #{note,jdbcType=VARCHAR})
+  </insert>
+    <update id="updateDeviceMaintain" parameterType="com.cskaoyan.domain.device.DeviceMaintain">
+    update device_maintain
+    set device_fault_id = #{deviceFaultId,jdbcType=VARCHAR},
+      device_maintain_emp_id = #{deviceMaintainEmpId,jdbcType=VARCHAR},
+      device_maintain_date = #{deviceMaintainDate,jdbcType=TIMESTAMP},
+      device_maintain_result = #{deviceMaintainResult,jdbcType=VARCHAR},
+      device_maintain_cost = #{deviceMaintainCost,jdbcType=DECIMAL},
+      note = #{note,jdbcType=VARCHAR}
+    where device_maintain_id = #{deviceMaintainId,jdbcType=VARCHAR}
+  </update>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from device_maintain
+    where device_maintain_id = #{deviceMaintainId,jdbcType=VARCHAR}
+  </delete>
+    <update id="updateNote" parameterType="java.lang.String">
+    update device_maintain set note = #{param2,jdbcType=VARCHAR}
+    where device_maintain_id = #{param1,jdbcType=VARCHAR}
+    </update>
+    <select id="searchDeviceMaintainByDeviceMaintainId" resultMap="BaseResultMap" parameterType="java.lang.String">
+     SELECT
+device_maintain.device_maintain_id,
+device_maintain.device_fault_id,
+device_maintain.device_maintain_emp_id,
+device_maintain.device_maintain_date,
+device_maintain.device_maintain_result,
+device_maintain.device_maintain_cost,
+device_maintain.note,
+employee.emp_name AS device_maintain_emp
+FROM
+device_maintain
+INNER JOIN employee ON device_maintain.device_maintain_emp_id = employee.emp_id
+WHERE device_maintain_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+</select>
+    <select id="searchDeviceMaintainByDeviceFaultId" resultMap="BaseResultMap" parameterType="java.lang.String">
+     SELECT
+device_maintain.device_maintain_id,
+device_maintain.device_fault_id,
+device_maintain.device_maintain_emp_id,
+device_maintain.device_maintain_date,
+device_maintain.device_maintain_result,
+device_maintain.device_maintain_cost,
+device_maintain.note,
+employee.emp_name AS device_maintain_emp
+FROM
+device_maintain
+INNER JOIN employee ON device_maintain.device_maintain_emp_id = employee.emp_id
+WHERE device_fault_id LIKE   CONCAT('%',#{searchValue,jdbcType=VARCHAR},'%' )
+</select>
+</mapper>
