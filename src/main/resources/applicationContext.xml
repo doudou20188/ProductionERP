@@ -14,7 +14,8 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:component-scan base-package="com.cskaoyan"></context:component-scan>
-    <mvc:annotation-driven ></mvc:annotation-driven>
+    <!--加上转换器字段-->
+    <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
 
     <!--<mvc:default-servlet-handler></mvc:default-servlet-handler>-->
  <!--   <mvc:resources location="/WEB-INF/image/" mapping="image/**"/>
@@ -105,6 +106,20 @@
         <property name="maxInMemorySize" value="4096" />
         <property name="defaultEncoding" value="UTF-8"></property>
     </bean>
+
+
+
+    <!-- 转换器 -->
+    <bean id="conversionService"
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.cskaoyan.controller.convert.CustomDateConverter"/>
+                <bean class="com.cskaoyan.controller.convert.StringTrimConverter"/>
+            </set>
+        </property>
+    </bean>
+
 
 
 </beans>

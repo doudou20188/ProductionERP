@@ -3,7 +3,9 @@ package com.cskaoyan.controller.qualify;
 import com.cskaoyan.domain.qualify.*;
 import com.cskaoyan.domain.qualify.VO.*;
 import com.cskaoyan.service.qualify.unqualifyService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,6 +30,7 @@ public class unqualify {
     }
 
     @RequestMapping("unqualify/list")
+    /*@RequiresPermissions("unqualify:list")*/
     @ResponseBody
     public unqualify_listVO unqualify_list() {
 

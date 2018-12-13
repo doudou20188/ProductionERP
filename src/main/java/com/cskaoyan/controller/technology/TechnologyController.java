@@ -4,6 +4,7 @@ import com.cskaoyan.domain.customize.CustomResult;
 import com.cskaoyan.domain.customize.EUDataGridResult;
 import com.cskaoyan.domain.technology.Technology;
 import com.cskaoyan.service.technology.TechnologyService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -32,9 +33,7 @@ public class TechnologyController {
 	}
 	
 	@RequestMapping("/find")
-	public String find(HttpSession session) throws Exception{
-		String[] sysPermissionList= {"technology:add","technology:edit","technology:delete"};
-		session.setAttribute("sysPermissionList",sysPermissionList);
+	public String find() throws Exception{
 		return "technology_list";
 	}
 
@@ -45,6 +44,7 @@ public class TechnologyController {
 		return null;
 	}
 	@RequestMapping("/add")
+	@RequiresPermissions("technology:add")
 	public String add() throws Exception{
 		/*String[] sysPermissionList= {"com.cskaoyan.mapper.technology:add","com.cskaoyan.mapper.technology:edit","com.cskaoyan.mapper.technology:delete"};
 		session.setAttribute("sysPermissionList",sysPermissionList);*/
@@ -58,6 +58,7 @@ public class TechnologyController {
 		return null;
 	}
 	@RequestMapping("/edit")
+	@RequiresPermissions("technology:edit")
 	public String edit() throws Exception{
 		/*String[] sysPermissionList= {"com.cskaoyan.mapper.technology:add","com.cskaoyan.mapper.technology:edit","com.cskaoyan.mapper.technology:delete"};
 		session.setAttribute("sysPermissionList",sysPermissionList);*/
@@ -113,6 +114,7 @@ public class TechnologyController {
 		return null;
 	}
 	@RequestMapping(value="/delete_batch")
+	@RequiresPermissions("technology:delete")
 	@ResponseBody
 	private CustomResult deleteBatch(String[] ids) throws Exception {
 		CustomResult result = technologyService.deleteBatch(ids);

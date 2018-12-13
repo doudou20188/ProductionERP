@@ -6,6 +6,7 @@ import com.cskaoyan.domain.technology.Technology;
 import com.cskaoyan.domain.technology.TechnologyRequirement;
 import com.cskaoyan.domain.technology.vo.TechnologyRequirementVO;
 import com.cskaoyan.service.technology.TechnologyRequirementService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -37,8 +38,6 @@ public class TechnologyRequirementController {
 	
 	@RequestMapping("/find")
 	public String find(HttpSession session) throws Exception{
-		String[] sysPermissionList= {"technologyRequirement:add","technologyRequirement:edit","technologyRequirement:delete"};
-		session.setAttribute("sysPermissionList",sysPermissionList);
 		return "technologyRequirement_list";
 	}
 
@@ -48,6 +47,7 @@ public class TechnologyRequirementController {
 		return null;
 	}
 	@RequestMapping("/add")
+	@RequiresPermissions("technologyRequirement:add")
 	public String add() throws Exception{
 		return "technologyRequirement_add";
 	}
@@ -58,6 +58,7 @@ public class TechnologyRequirementController {
 		return null;
 	}
 	@RequestMapping("/edit")
+	@RequiresPermissions("technologyRequirement:edit")
 	public String edit() throws Exception{
 		return "technologyRequirement_edit";
 	}
@@ -123,6 +124,7 @@ public class TechnologyRequirementController {
 		return null;
 	}
 	@RequestMapping(value="/delete_batch")
+	@RequiresPermissions("technologyRequirement:delete")
 	@ResponseBody
 	private CustomResult deleteBatch(String[] ids) throws Exception {
 		CustomResult result = technologyRequirementService.deleteBatch(ids);

@@ -5,6 +5,7 @@ import com.cskaoyan.domain.customize.EUDataGridResult;
 import com.cskaoyan.domain.technology.TechnologyPlan;
 import com.cskaoyan.domain.technology.vo.TechnologyPlanVO;
 import com.cskaoyan.service.technology.TechnologyPlanService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -33,9 +34,7 @@ public class TechnologyPlanController {
 	}
 	
 	@RequestMapping("/find")
-	public String find(HttpSession session) throws Exception{
-		String[] sysPermissionList= {"technologyPlan:add","technologyPlan:edit","technologyPlan:delete"};
-		session.setAttribute("sysPermissionList",sysPermissionList);
+	public String find() throws Exception{
 		return "technologyPlan_list";
 	}
 
@@ -45,6 +44,7 @@ public class TechnologyPlanController {
 		return null;
 	}
 	@RequestMapping("/add")
+	@RequiresPermissions("technologyPlan:add")
 	public String add() {
 		return "technologyPlan_add";
 	}
@@ -55,6 +55,7 @@ public class TechnologyPlanController {
 		return null;
 	}
 	@RequestMapping("/edit")
+	@RequiresPermissions("technologyPlan:edit")
 	public String edit() throws Exception{
 		return "technologyPlan_edit";
 	}
@@ -107,6 +108,7 @@ public class TechnologyPlanController {
 		return null;
 	}
 	@RequestMapping(value="/delete_batch")
+	@RequiresPermissions("technologyPlan:delete")
 	@ResponseBody
 	private CustomResult deleteBatch(String[] ids) throws Exception {
 		CustomResult result = technologyPlanService.deleteBatch(ids);
