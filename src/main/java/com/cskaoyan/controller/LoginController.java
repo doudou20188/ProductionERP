@@ -60,6 +60,8 @@ public class LoginController {
             List<String> permissions = activeUser.getPermissions();
 
             System.out.println("sysPermissionList = " + permissions);
+            System.out.println("activeUser = " + activeUser);
+            session.setAttribute("activeUser",activeUser);
             session.setAttribute("sysPermissionList",permissions);
         }
 

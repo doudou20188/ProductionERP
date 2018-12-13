@@ -40,7 +40,7 @@ public class CustomRealm extends AuthorizingRealm {
 
         //根据用户名和密码去查询数据库看看是否这个用户
         User user = userService.selectUserByLoginName(principal);
-
+        String username = user.getUsername();
         //查询当前用户的角色
         if (user == null) {
             return null;
@@ -48,15 +48,15 @@ public class CustomRealm extends AuthorizingRealm {
 
         String password_from_db = user.getPassword();
         //查询当前用户的角色
-        String role = userService.getRoleByUsername(user.getUsername());
+        String role = userService.getRoleByUsername(username);
         //根据用户名获取该用户的权限
-        List<String> permissions = userService.queryPermissionByUserName(user.getUsername());
+        List<String> permissions = userService.queryPermissionByUserName(username);
 
         /*将用户封装到一个用户信息的vo中*/
         ActiveUser activeUser = new ActiveUser();
         activeUser.setUserid(user.getId() + "");
-        activeUser.setUsername(user.getUsername());
-        activeUser.setRolename(user.getRoleName());
+        activeUser.setUsername(username);
+        activeUser.setRolename(role);
         activeUser.setUserStatus("1");
         activeUser.setPermissions(permissions);
 
