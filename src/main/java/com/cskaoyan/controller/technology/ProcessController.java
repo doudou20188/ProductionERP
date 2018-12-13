@@ -5,6 +5,7 @@ import com.cskaoyan.domain.customize.EUDataGridResult;
 import com.cskaoyan.domain.technology.Processes;
 import com.cskaoyan.service.technology.ProcessService;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -33,9 +34,7 @@ public class ProcessController {
 	}
 	
 	@RequestMapping("/find")
-	public String find(HttpSession session) throws Exception{
-        String[] sysPermissionList= {"process:add","process:edit","process:delete"};
-        session.setAttribute("sysPermissionList",sysPermissionList);
+	public String find() throws Exception{
 		return "process_list";
 	}
 
@@ -45,7 +44,9 @@ public class ProcessController {
     public String addB(){
         return null;
     }
+
 	@RequestMapping("/add")
+	@RequiresPermissions("process:add")
 	public String add() throws Exception{
 		return "process_add";
 	}
@@ -57,6 +58,7 @@ public class ProcessController {
         return null;
     }
 	@RequestMapping("/edit")
+	@RequiresPermissions("process:edit")
 	public String edit() throws Exception{
 		return "process_edit";
 	}
@@ -107,6 +109,7 @@ public class ProcessController {
         return null;
     }
 	@RequestMapping(value="/delete_batch")
+	@RequiresPermissions("process:delete")
 	@ResponseBody
 	private CustomResult deleteBatch(String[] ids) throws Exception {
 		CustomResult result = processService.deleteBatch(ids);
