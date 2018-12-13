@@ -49,6 +49,8 @@ public class CustomRealm extends AuthorizingRealm {
         String password_from_db = user.getPassword();
         //查询当前用户的角色
         String role = userService.getRoleByUsername(user.getUsername());
+        //根据用户名获取该用户的权限
+        List<String> permissions = userService.queryPermissionByUserName(user.getUsername());
 
         /*将用户封装到一个用户信息的vo中*/
         ActiveUser activeUser = new ActiveUser();
@@ -56,6 +58,7 @@ public class CustomRealm extends AuthorizingRealm {
         activeUser.setUsername(user.getUsername());
         activeUser.setRolename(user.getRoleName());
         activeUser.setUserStatus("1");
+        activeUser.setPermissions(permissions);
 
         //传进来的第一个参数：1，传给授权器 2，放到session里面方便取数据
         //可以使用ActiveUser保存认证信息，并放置在SimpleAuthenticationInfo中
@@ -75,9 +78,8 @@ public class CustomRealm extends AuthorizingRealm {
         //可以再写一个获取该user的role的方法，并将该role加到Info中去
         simpleAuthorizationInfo.addRole(primaryPrincipal.getRolename());
 
-        //根据用户名获取该用户的权限
-        List<String> permissions = userService.queryPermissionByUserName(primaryPrincipal.getUsername());
-        simpleAuthorizationInfo.addStringPermissions(permissions);
+
+        simpleAuthorizationInfo.addStringPermissions(primaryPrincipal.getPermissions());
 
         return simpleAuthorizationInfo;
     }

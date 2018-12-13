@@ -39,6 +39,8 @@
         <!--shiro提供了很多filter，可以构成一个filterChain-->
         <property name="filterChainDefinitions">
             <value>
+                <!--/** = authc-->
+
                 <!-- 对静态资源设置匿名访问 -->
                 /image/** = anon
                 /css/** = anon
@@ -53,11 +55,18 @@
                 <!--（1）在xml文件中配置授权操作-->
                 /employee/add = perms[employee:add]
                 /employee/edit = perms[employee:edit]
-                /employee/delete = perms[employee:delete]
+                /employee/delete_batch = perms[employee:delete]
 
                 /department/add = perms[department:add]
                 /department/edit = perms[department:edit]
                 /department/delete_batch = perms[department:delete]
+
+                /unqualify/add = perms[unqualify:add]
+                /unqualify/edit = perms[unqualify:edit]
+                /unqualify/delete_batch = perms[unqualify:delete]
+
+
+
 
                 <!--（2）也可以通过注解进行授权操作：通过注解时需要配置xml文件，导依赖，并且需要另配失败转向页面-->
                 <!--（3）在jsp页面中添加标签-->

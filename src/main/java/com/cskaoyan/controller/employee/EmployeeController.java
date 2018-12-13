@@ -35,8 +35,6 @@ public class EmployeeController {
      */
     @RequestMapping("/find")
     public String find(HttpSession session){
-        String[] sysPermissionList = {"employee:add","employee:edit","employee:delete"};
-        session.setAttribute("sysPermissionList",sysPermissionList);
         return "employee_list";
     }
 

@@ -2,6 +2,7 @@ package com.cskaoyan.domain.user;
 
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * ActiveUser，用来保存认证信息。它里面可以包含realm从数据库查询用户信息，
@@ -16,6 +17,15 @@ public class ActiveUser implements Serializable {
     private String username; //用户名称
     private String userStatus; //用户状态
     private String rolename; //角色名称
+    private List<String> permissions;
+
+    public List<String> getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(List<String> permissions) {
+        this.permissions = permissions;
+    }
 
     @Override
     public String toString() {
@@ -24,6 +34,7 @@ public class ActiveUser implements Serializable {
                 ", username='" + username + '\'' +
                 ", userStatus='" + userStatus + '\'' +
                 ", rolename='" + rolename + '\'' +
+                ", permissions=" + permissions +
                 '}';
     }
 

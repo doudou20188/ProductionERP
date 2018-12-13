@@ -60,8 +60,6 @@ public class DepartmentController {
 
     @RequestMapping("/find")
     public String find(HttpSession session){
-        String[] sysPermissionList = {"department:add","department:edit","department:delete"};
-        session.setAttribute("sysPermissionList",sysPermissionList);
         return "department_list";
     }
 
